@@ -81,6 +81,17 @@ nav {
   font-weight: bold;
 }
 
+/* Welcome user */
+.welcome_user {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #2D8201;
+}
+
 /* Styling for the navigation links */
 .nav__links {
   list-style: none;
