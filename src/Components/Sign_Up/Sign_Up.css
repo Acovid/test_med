@@ -28,7 +28,9 @@ body {
 }
 
 .signup-card {
+  width: 420px;
   margin: auto;
+  margin-top: 80px;
   padding: 30px;
   border-radius: 10px;
   border: solid 1px #f5e0db;
@@ -85,6 +87,7 @@ body {
 /* Styles for form groups in the signup form */
 .form-group {
   margin-bottom: 20px; /* Add bottom margin to form groups */
+  text-align: left;
 }
 
 .form-group label {
@@ -95,7 +98,7 @@ body {
 
 /* Styles for form controls in the signup form */
 .form-control {
-  width: 40%; /* Set width of form controls */
+  width: 335px; /* Set width of form controls  */
   padding: 8px; /* Add padding inside form controls */
   font-size: 16px; /* Set font size */
   border: 1px solid #ccc; /* Add border with color */

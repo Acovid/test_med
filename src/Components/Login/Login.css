@@ -9,9 +9,11 @@ body {
   padding: 40px; /* Padding inside the container */
   margin-top: 10%; /* Top margin of 10% */
 }
-
+ 
 .login-card {
+  width: 400px;
   margin: auto;
+  margin-top: 80px;
   padding: 30px;
   border-radius: 10px;
   border: solid 1px #f5e0db;
@@ -32,7 +34,7 @@ body {
 
 /* Styles for form controls */
 .form-control {
-  width: 40%; /* Width of form controls */
+  width: 335px; /* Width of form controls */
   padding: 8px; /* Padding inside form controls */
   font-size: 16px; /* Font size of form controls */
   border: 1px solid #ccc; /* Border around form controls */
