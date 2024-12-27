@@ -81,7 +81,6 @@ nav {
   font-weight: bold;
 }
 
-
 /* Styling for the navigation links */
 .nav__links {
   list-style: none;
@@ -91,7 +90,6 @@ nav {
   font-size: 1.5rem;
   font-weight: 500;
   color: #222222;
-
 }
 
 /* Styling for individual links in the navigation */
@@ -108,15 +106,26 @@ nav {
   color: #ff851b;
 }
 
+/* Media queries larger than mobile responsiveness */
+@media (min-width: 769px) {
+  .nav__icon {
+    /* do not show teh hamburger icon on larger than mobile screen */
+    display: none;
+  }
+}
+
 /* Media queries for mobile responsiveness */
 @media (max-width: 768px) {
   .nav__logo {
     margin-right: auto;
+    /* margin-left: 1rem; */
   }
 
-  /* .nav__icon {
+  .nav__icon {
     display: block;
-  } */
+    /* margin-right: 5rem; */
+
+  }
 
   .nav__links {
     display: none;
@@ -158,11 +167,13 @@ nav {
 /* Button styles */
 .btn1 {
   /* border: 2px solid #ff851b; */
+  margin-top: 0;
   border: none;
   background-color: white;
   color: #222222;
   /* border-radius: 50px; */
   font-size: 1.3rem;
+  font-weight: 500;
 }
 
 .btn1:hover {
@@ -181,7 +192,7 @@ nav {
   display: flex; /* Align items and justify content */
   align-items: center; /* Align items and justify content */
   justify-content: center; /* Align items and justify content */
-  margin-top: 3px; /* Margin from top */
+  /* margin-top: 3px; Margin from top */
 }
 
 .btn2:hover {
