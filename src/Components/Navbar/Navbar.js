@@ -5,39 +5,46 @@ import login from "./login.svg"
 
 // Define a functional component
 const Navbar = () => {
-  // BLOCK: determine if a user is logged in
   const [name, setName] = useState("")
+  // user's name
   const [signUpOrWelcome, setSignUpOrWelcome] = useState("")
+  // flip: either display menu option Sign Up or Welcome user
   const [loginOrLogout, setLoginOrLogout] = useState("")
+  // flip: either display menu option Login or Logout
+
   // sessionStorage.setItem("name", "Aco")
 
-  // use later the const name to check fpr user's name in sessions storage
+  // useEffect will determine if a user is logged in
   useEffect(() => {
     // When the component mounts, check if there's a 'name' value in Session Storage.
     const storedName = sessionStorage.getItem("name")
 
-    // this if statement will determine what to show in teh menu: Sign Up & Login or Welcome, user and Logout
-    if (sessionStorage.getItem("name") !== "") {
-      // user is logged in
+    function userIsLoggedin() {
+      // do stuff if user is logged in
       setName(storedName)
       console.log("-- Yes, there is a name in the session storage! This one:", storedName)
       setSignUpOrWelcome(<li className="welcome_user">Welcome {storedName}</li>)
       setLoginOrLogout(
-        <li className="link" onClick={()=>{
-          sessionStorage.setItem("name", "")
-          alert('I logged out')
-        }}>
+        <li
+          className="link"
+          onClick={() => {
+            sessionStorage.setItem("name", "")
+            alert("I logged out")
+          }}
+        >
           <a href="/">
             {/* <img className="login_icon" src={login} alt="Enter" /> */}
             <button className="btn1">Logout</button>
           </a>
         </li>
       )
-      console.log("signUpOrWelcome:", signUpOrWelcome);
-      console.log("loginOrLogout:", loginOrLogout);      
+      console.log("signUpOrWelcome:", signUpOrWelcome)
+      console.log("loginOrLogout:", loginOrLogout)
       // sessionStorage.setItem("name", null)
-    } else {
-      // no user logged in
+    }
+
+    function userIsLoggedout() {
+      // do stuff if user is logged out
       console.log("-- No name in the session storage.")
       setSignUpOrWelcome(
         <li className="link">
@@ -57,8 +64,16 @@ const Navbar = () => {
       console.log("signUpOrWelcome:", { signUpOrWelcome })
       // Save the entered name to Session Storage.
     }
+
+    // this if statement will determine what to show in the menu: Sign Up & Login or Welcome, user and Logout
+    if (sessionStorage.getItem("name") !== "") {
+      // user is logged in
+      userIsLoggedin()
+    } else {
+      // no user logged in
+      userIsLoggedout()
+    }
   }, [])
-  // END BLOCK: determine if the user is logged in
 
   return (
     <nav>
