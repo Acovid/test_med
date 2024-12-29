@@ -1,28 +1,27 @@
-const mongoose = require('mongoose');
-const mongoURI =  "mongodb://root:7xstDgPFLPanzuVDKvvjHnPG@172.21.251.13:27017";
+const mongoose = require("mongoose")
+const mongoURI = "mongodb://root:6qm4bX3KFojBdb1TSIFr3EM4@172.21.27.29:27017"
 
-const connectToMongo = async (retryCount) => {
-    const MAX_RETRIES = 3;
-    const count = retryCount ?? 0;
-    try {
-        await mongoose.connect(mongoURI, { dbName: 'stayhealthybeta1'});
-        console.info('Connected to Mongo Successfully')
+const connectToMongo = async retryCount => {
+  const MAX_RETRIES = 3
+  const count = retryCount ?? 0
+  try {
+    await mongoose.connect(mongoURI, { dbName: "stayhealthybeta1" })
+    console.info("Connected to Mongo Successfully")
 
-        return;
-    } catch (error) {
-        console.error(error);
+    return
+  } catch (error) {
+    console.error(error)
 
-        const nextRetryCount = count + 1;
+    const nextRetryCount = count + 1
 
-        if (nextRetryCount >= MAX_RETRIES) {
-            throw new Error('Unable to connect to Mongo!');
-        }
-
-        console.info(`Retrying, retry count: ${nextRetryCount}`)
-
-        return await connectToMongo(nextRetryCount);
-
+    if (nextRetryCount >= MAX_RETRIES) {
+      throw new Error("Unable to connect to Mongo!")
     }
-};
 
-module.exports = connectToMongo;
+    console.info(`Retrying, retry count: ${nextRetryCount}`)
+
+    return await connectToMongo(nextRetryCount)
+  }
+}
+
+module.exports = connectToMongo
