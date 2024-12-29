@@ -42,11 +42,13 @@ const Sign_Up = () => {
       sessionStorage.setItem("name", name)
       sessionStorage.setItem("phone", phone)
       sessionStorage.setItem("email", email)
+      console.log(`Signed up with name ${name}, phone ${phone} and email ${email}`)
       // Redirect user to home page
       navigate("/")
       window.location.reload() // Refresh the page
     } else {
       if (json.errors) {
+        console.log(`ERROR! Sign up was unsuccessful!`)
         for (const error of json.errors) {
           setShowerr(error.msg) // Show error messages
         }
