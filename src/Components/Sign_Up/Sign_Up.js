@@ -48,7 +48,7 @@ const Sign_Up = () => {
       window.location.reload() // Refresh the page
     } else {
       if (json.errors) {
-        console.log(`ERROR! Sign up was unsuccessful!`)
+        // console.log(`ERROR! Sign up was unsuccessful!`)
         for (const error of json.errors) {
           setShowerr(error.msg) // Show error messages
         }
@@ -87,7 +87,7 @@ const Sign_Up = () => {
 
             <div className="form-group">
               {/*  Form group for role  */}
-              <label for="role">Role</label>
+              <label htmlFor="role">Role</label>
               {/*  Label for role input field  */}
               <select name="role" id="role" style={{ padding: "6px" }}>
                 {/*  Dropdown menu for role  */}
