@@ -37,7 +37,7 @@
 
 .hero-section .button {
   padding: 0.7rem 2rem;
-  border-radius: 25px;
+  border-radius: 10px;
   background-color: #ff851b;
   color: #fff;
   border: 1px solid transparent;
@@ -82,6 +82,8 @@ button {
 
 .button:hover {
   transform: scale(0.98);
+  background-color: #fc9c48;
+  color: black;
 }
 
 @media screen and (max-width: 980px) {
