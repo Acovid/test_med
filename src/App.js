@@ -6,9 +6,10 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./App.css"
 // Import my components
 import Navbar from "./Components/Navbar/Navbar"
-import Landing_Page from "./Components/Landing_Page/Landing_Page"
-import Sign_Up from "./Components/Sign_Up/Sign_Up"
+import LandingPage from "./Components/LandingPage/LandingPage"
+import SignUp from "./Components/SignUp/SignUp"
 import Login from "./Components/Login/Login"
+import InstantConsultation from "./Components/InstantConsultation/InstantConsultation"
 
 function App() {
   return (
@@ -19,12 +20,10 @@ function App() {
         <Navbar />
         {/* Set up the Routes for different pages */}
         <Routes>
-          {/* { */}
-            /* Define individual Route components for different pages */
-            <Route path="/" element={<Landing_Page />} />
-            <Route path="/sign-up" element={<Sign_Up />} />
-            <Route path="/login" element={<Login />} />
-          {/* } */}
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/instant-consultation" element={<InstantConsultation />} />
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
         </Routes>
       </BrowserRouter>
     </div>

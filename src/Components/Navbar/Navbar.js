@@ -15,40 +15,39 @@ const Navbar = () => {
 
   const navigate = useNavigate() // Navigation hook from react-router
 
-//   sessionStorage.setItem("email", "acovid@si.ibm.com")
+  //   sessionStorage.setItem("email", "acovid@si.ibm.com")
   // useEffect will determine if a user is logged in
   useEffect(() => {
-
     // check if user is logged in with an email
     let userName = ""
     if (sessionStorage.getItem("email")) {
-        // get email from the session storage
-        const email = sessionStorage.getItem("email")
-        console.log(`email: ${email}`)
-        userName = email.substring(0, email.indexOf("@"))
-        console.log('userName: ', userName)
-        // display the welcome message and Logout button
-        userIsLoggedin()
+      // get email from the session storage
+      const email = sessionStorage.getItem("email")
+      console.log(`email: ${email}`)
+      userName = email.substring(0, email.indexOf("@"))
+      console.log("userName: ", userName)
+      // display the welcome message and Logout button
+      userIsLoggedin()
     } else {
-        console.log('No session, so user is logged out')
-         // display the Sign Up and Login button
-        userIsLoggedout()
+      console.log("No session, so user is logged out")
+      // display the Sign Up and Login button
+      userIsLoggedout()
     }
     // When the component mounts, check if there's a 'name' value in Session Storage.
     // const name = sessionStorage.getItem("name")
 
     function userIsLoggedin() {
       // do stuff if user is logged in
-    //   setName(name)
-    //   console.log("-- Yes, there is a name in the session storage! This one:", name)
+      //   setName(name)
+      //   console.log("-- Yes, there is a name in the session storage! This one:", name)
       setSignUpOrWelcome(<li className="welcome_user">Welcome {userName}</li>)
       setLoginOrLogout(
         <li
           className="link"
-        //  run this function when user clicks Logout
+          //  run this function when user clicks Logout
           onClick={() => {
             console.log(`User ${userName} logged out`)
-            sessionStorage.clear();
+            sessionStorage.clear()
             navigate("/")
             // window.location.reload()
           }}
@@ -59,9 +58,6 @@ const Navbar = () => {
           </a>
         </li>
       )
-    //   console.log("signUpOrWelcome:", signUpOrWelcome)
-    //   console.log("loginOrLogout:", loginOrLogout)
-      // sessionStorage.setItem("name", null)
     }
 
     function userIsLoggedout() {
@@ -82,7 +78,7 @@ const Navbar = () => {
           </a>
         </li>
       )
-    //   console.log("signUpOrWelcome:", { signUpOrWelcome })
+      //   console.log("signUpOrWelcome:", { signUpOrWelcome })
       // Save the entered name to Session Storage.
     }
 
@@ -98,14 +94,10 @@ const Navbar = () => {
 
   return (
     <nav>
-      {/* Navigation logo section */}
-      {/* Link to the home page */}
       <a href="/">
         <img className="nav__logo" src={logo} alt="Stay Healthy logo" />
       </a>
 
-      {/* Navigation icon section with an onClick event listener */}
-      {/* <div className="nav__icon" onClick={handleClick}> */}
       <div className="nav__icon">
         {/* Font Awesome icon for bars (hamburger menu) */}
         <i className="fa fa-times fa fa-bars"></i>
@@ -113,13 +105,11 @@ const Navbar = () => {
 
       {/*  Unordered list for navigation links with 'active' className  */}
       <ul className="nav__links active">
-        {/*  List item for the 'Home' link  */}
         <li className="link">
           <a href="/">Home</a>
         </li>
-        {/*  List item for the 'Appointments' link  */}
         <li className="link">
-          <a href="#">Appointments</a>
+          <a href="/instant-consultation">Appointments</a>
         </li>
 
         {/* show either Sign Up or Welcome - depending f the user is logged in */}

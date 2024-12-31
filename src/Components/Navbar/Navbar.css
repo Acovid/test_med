@@ -90,7 +90,7 @@ nav {
   gap: 1rem;
   font-size: 1.5rem;
   font-weight: 500;
-  color: #2D8201;
+  color: #2d8201;
 }
 
 /* Styling for the navigation links */
@@ -136,7 +136,6 @@ nav {
   .nav__icon {
     display: block;
     /* margin-right: 5rem; */
-
   }
 
   .nav__links {
@@ -189,7 +188,7 @@ nav {
 }
 
 .btn1:hover {
-  /* background-color: #ff851b; Hover effect */
+  background-color: white;
   color: #ff851b;
 }
 

@@ -1,10 +1,10 @@
 import React, { useState } from "react"
-import "./Sign_Up.css"
+import "./SignUp.css"
 import { Link, useNavigate } from "react-router-dom"
 import { API_URL } from "../../config"
 
 // Define a functional component
-const Sign_Up = () => {
+const SignUp = () => {
   // State variables using useState hook
   const [name, setName] = useState("")
   const [email, setEmail] = useState("")
@@ -132,4 +132,4 @@ const Sign_Up = () => {
 }
 
 // Export the component
-export default Sign_Up
+export default SignUp
