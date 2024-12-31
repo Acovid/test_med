@@ -85,55 +85,39 @@ const Sign_Up = () => {
           <form method="POST" onSubmit={register}>
             {/*  Start of the form  */}
 
-            <div className="form-group">
-              {/*  Form group for role  */}
+            {/* <div className="form-group">
               <label htmlFor="role">Role</label>
-              {/*  Label for role input field  */}
               <select name="role" id="role" style={{ padding: "6px" }}>
-                {/*  Dropdown menu for role  */}
                 <option value="doctor">Doctor</option>
                 <option value="patient">Patient</option>
               </select>
-            </div>
+            </div> */}
 
             <div className="form-group">
-              {/*  Form group for user's name  */}
               <label htmlFor="name">Name</label>
-              {/*  Label for name input field  */}
               <input value={name} type="text" onChange={e => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" />
-              {/*  Text input field for name  */}
             </div>
 
             <div className="form-group">
-              {/*  Form group for user's phone number  */}
               <label htmlFor="phone">Phone</label>
-              {/*  Label for phone input field  */}
-              {/* <input type="tel" name="phone" id="phone" required className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" pattern="[0-9]{3}[0-9]{3}[0-9]{4}" /> */}
               <input value={phone} onChange={e => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" />
-              {/*  Tel input field for phone number  */}
               <p>Enter 10 numbers</p>
             </div>
 
             <div className="form-group">
               {/*  Form group for user's email  */}
-              <label htmlFor="email">Email</label>
               {/*  Label for email input field  */}
-              <input value={email} onChange={e => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" />
               {showerr && (
                 <div className="err" style={{ color: "red" }}>
                   {showerr}
                 </div>
               )}
               {/*  Email input field  */}
-            </div>
 
             <div className="form-group">
               {/*  Form group for user's password  */}
-              <label htmlFor="password">Password</label>
               {/*  Label for password input field  */}
-              <input value={password} onChange={e => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
               {/*  Password input field */}
-            </div>
 
             <div className="btn-group">
               {/*  Button group for form submission and reset  */}
