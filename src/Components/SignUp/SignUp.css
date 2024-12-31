@@ -20,6 +20,10 @@ body {
   font-size: 17px; /* Set font size */
 }
 
+.input-field-rule {
+  font-size: 12px;
+}
+
 /* Styles for the grid layout of the signup form */
 .signup-grid {
   display: grid; /* Use grid layout for the element */

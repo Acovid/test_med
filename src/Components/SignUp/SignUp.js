@@ -94,21 +94,24 @@ const SignUp = () => {
 
             <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" />
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" required/>
                 {/* {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>} */}
             </div>
 
             <div className="form-group">
                 <label htmlFor="name">Name</label>
-                <input value={name} type="text" onChange={(e) => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" />
+                <input value={name} type="text" onChange={(e) => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" minlength="4" required/>
+                <p className="input-field-rule">Name must have at least 4 characters</p>
             </div>
             <div className="form-group">
                 <label htmlFor="phone">Phone</label>
-                <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" />
+                <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" minlength="10" maxlength="10" required/>
+                <p className="input-field-rule">Phone number should be 10 Digits</p>
             </div>
             <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
+                <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" minlength="8" required/>
+                <p className="input-field-rule">Password must have at least 8 characters</p>
             </div>
 
           <div className="btn-group">
