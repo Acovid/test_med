@@ -22,6 +22,16 @@
 
 }
 
+/* .search-results-card {
+  width: 400px;
+  margin: auto;
+  margin-top: 80px;
+  padding: 30px;
+  border-radius: 10px;
+  border: solid 1px #f5e0db;
+  background-color: #fff;
+} */
+
 .search-results-container>h2 {
     text-align: left;
     font-size: 24px;
