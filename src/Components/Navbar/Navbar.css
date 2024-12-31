@@ -19,6 +19,7 @@ nav {
   justify-content: space-between;
   background-color: #fff;
   color: #222222;
+  border-bottom: 1px solid #f5e0db;
 }
 
 /* Styling for the dropdown menu */
