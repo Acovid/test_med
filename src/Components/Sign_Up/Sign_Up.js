@@ -61,81 +61,74 @@ const Sign_Up = () => {
   // JSX to render the Sign Up form
   return (
     <div className="container" style={{ marginTop: "5%" }}>
-      {/*  Main container with margin-top  */}
+    {/*  Main container with margin-top  */}
 
-      <div className="signup-grid signup-card">
-        {/*  Grid layout for sign-up form  */}
+    <div className="signup-grid signup-card">
+      {/*  Grid layout for sign-up form  */}
 
-        <div className="signup-text">
-          {/*  Title for the sign-up form  */}
-          <h1>Sign Up</h1>
-        </div>
-        <div className="signup-text1">
-          {/*  Text for existing members to log in  */}
-          Already a member?{" "}
-          <span>
-            <a href="/Login" style={linkStyle}>
-              Login
-            </a>
-          </span>
-        </div>
+      <div className="signup-text">
+        {/*  Title for the sign-up form  */}
+        <h1>Sign Up</h1>
+      </div>
+      <div className="signup-text1">
+        {/*  Text for existing members to log in  */}
+        Already a member?{" "}
+        <span>
+          <a href="/Login" style={linkStyle}>
+            Login
+          </a>
+        </span>
+      </div>
 
-        <div className="signup-form">
-          {/*  Form for user sign-up  */}
-          <form method="POST" onSubmit={register}>
-            {/*  Start of the form  */}
+      <div className="signup-form">
+        {/*  Form for user sign-up  */}
+        <form method="POST" onSubmit={register}>
 
-            {/* <div className="form-group">
-              <label htmlFor="role">Role</label>
-              <select name="role" id="role" style={{ padding: "6px" }}>
-                <option value="doctor">Doctor</option>
-                <option value="patient">Patient</option>
-              </select>
-            </div> */}
+          {/* <div className="form-group">
+            <label htmlFor="role">Role</label>
+            <select name="role" id="role" style={{ padding: "6px" }}>
+              <option value="doctor">Doctor</option>
+              <option value="patient">Patient</option>
+            </select>
+          </div> */}
 
             <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input value={name} type="text" onChange={e => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" />
+                <label htmlFor="email">Email</label>
+                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" />
+                {/* {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>} */}
             </div>
 
             <div className="form-group">
-              <label htmlFor="phone">Phone</label>
-              <input value={phone} onChange={e => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" />
-              <p>Enter 10 numbers</p>
+                <label htmlFor="name">Name</label>
+                <input value={name} type="text" onChange={(e) => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" />
+            </div>
+            <div className="form-group">
+                <label htmlFor="phone">Phone</label>
+                <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" />
+            </div>
+            <div className="form-group">
+                <label htmlFor="password">Password</label>
+                <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" />
             </div>
 
-            <div className="form-group">
-              {/*  Form group for user's email  */}
-              {/*  Label for email input field  */}
-              {showerr && (
-                <div className="err" style={{ color: "red" }}>
-                  {showerr}
-                </div>
-              )}
-              {/*  Email input field  */}
-
-            <div className="form-group">
-              {/*  Form group for user's password  */}
-              {/*  Label for password input field  */}
-              {/*  Password input field */}
-
-            <div className="btn-group">
-              {/*  Button group for form submission and reset  */}
-              <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
-                Submit
-              </button>
-              {/*  Submit button  */}
-              <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">
-                Reset
-              </button>
-              {/*  Reset button  */}
-            </div>
-          </form>
-          {/*  End of the form  */}
-        </div>
+          <div className="btn-group">
+            {/*  Button group for form submission and reset  */}
+            <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
+              Submit
+            </button>
+            {/*  Submit button  */}
+            <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">
+              Reset
+            </button>
+            {/*  Reset button  */}
+          </div>
+        </form>
+        {/*  End of the form  */}
       </div>
     </div>
-  )
+  </div>
+
+)
 }
 
 // Export the component
