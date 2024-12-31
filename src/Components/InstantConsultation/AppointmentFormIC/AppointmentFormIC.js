@@ -38,6 +38,27 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
             required
           />
         </div>
+        <div className="form-group">
+          <label htmlFor="selectedSlot">Date of Appointment:</label>
+          <input
+            type="date"
+            id="selectedSlot"
+            value={selectedSlot}
+            onChange={(e) => setSelectedSlot(e.target.value)}
+            required
+          />
+        </div>
+        <div className="form-group">
+            <p>
+            <b>Book Time Slot:</b>
+            </p>
+            <select>
+                <option value="fruit">Select a time slot</option>
+                <option value="9">9:00-10:00</option>
+                <option value="10">10:00-11:00</option>
+            </select>
+        </div>
+        
         <button type="submit">Book Now</button>
       </form>
     );
