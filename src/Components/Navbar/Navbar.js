@@ -15,31 +15,25 @@ const Navbar = () => {
 
   const navigate = useNavigate() // Navigation hook from react-router
 
-  //   sessionStorage.setItem("email", "acovid@si.ibm.com")
   // useEffect will determine if a user is logged in
   useEffect(() => {
-    // check if user is logged in with an email
+    // When the component mounts, check if there's a 'email' value in Session Storage.
     let userName = ""
     if (sessionStorage.getItem("email")) {
-      // get email from the session storage
+      // if email exists in the session storage
       const email = sessionStorage.getItem("email")
       console.log(`email: ${email}`)
       userName = email.substring(0, email.indexOf("@"))
       console.log("userName: ", userName)
-      // display the welcome message and Logout button
+      // in navbar display the welcome message and Logout button
       userIsLoggedin()
     } else {
-      console.log("No session, so user is logged out")
-      // display the Sign Up and Login button
+      // in navbar display the Sign Up and Login button
       userIsLoggedout()
     }
-    // When the component mounts, check if there's a 'name' value in Session Storage.
-    // const name = sessionStorage.getItem("name")
 
     function userIsLoggedin() {
       // do stuff if user is logged in
-      //   setName(name)
-      //   console.log("-- Yes, there is a name in the session storage! This one:", name)
       setSignUpOrWelcome(<li className="welcome_user">Welcome {userName}</li>)
       setLoginOrLogout(
         <li
@@ -78,18 +72,7 @@ const Navbar = () => {
           </a>
         </li>
       )
-      //   console.log("signUpOrWelcome:", { signUpOrWelcome })
-      // Save the entered name to Session Storage.
     }
-
-    // this if statement will determine what to show in the menu: Sign Up & Login or Welcome, user and Logout
-    // if (sessionStorage.getItem("name") !== "") {
-    //   // user is logged in
-    //   userIsLoggedin()
-    // } else {
-    //   // no user logged in
-    //   userIsLoggedout()
-    // }
   }, [])
 
   return (
