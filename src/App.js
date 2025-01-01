@@ -11,6 +11,7 @@ import SignUp from "./Components/SignUp/SignUp"
 import Login from "./Components/Login/Login"
 import InstantConsultation from "./Components/InstantConsultation/InstantConsultation"
 import BookingConsultation from "./Components/BookingConsultation/BookingConsultation"
+import FakeLogin from "./Components/Login/FakeLogin"
 
 function App() {
   return (
@@ -26,6 +27,7 @@ function App() {
           <Route path="/booking-consultation" element={<BookingConsultation />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/fake-login" element={<FakeLogin />} />
         </Routes>
       </BrowserRouter>
     </div>
