@@ -3,13 +3,14 @@ import Navbar from "../Navbar/Navbar"
 import "./Notification.css"
 
 // Function component Notification to display user notifications
-const Notification = ({ children }) => {
+const FakeNotification = ({ children }) => {
   // State variables to manage user authentication, username, doctor data, and appointment data
   const [isLoggedIn, setIsLoggedIn] = useState(false)
   const [username, setUsername] = useState("")
   const [doctorData, setDoctorData] = useState(null)
   const [appointmentData, setAppointmentData] = useState(null)
   const [notificationIsVisible, setNotificationIsVisible] = useState(false)
+
 
   // useEffect hook to perform side effects in the component
   useEffect(() => {
@@ -46,8 +47,7 @@ const Notification = ({ children }) => {
       {/* Render children components */}
       {children}
       {/* Display appointment details if user is logged in and appointmentData is available */}
-      {isLoggedIn && appointmentData && (
-        <>
+      <>
         <div className="appointment-card">
           <div className="appointment-card__content">
             {/* Display title for appointment details */}
@@ -75,10 +75,9 @@ const Notification = ({ children }) => {
           </div>
         </div>
       </>
-      )}
     </div>
   )
 }
 
 // Export Notification component for use in other parts of the application
-export default Notification
+export default FakeNotification

@@ -12,6 +12,8 @@ import Login from "./Components/Login/Login"
 import InstantConsultation from "./Components/InstantConsultation/InstantConsultation"
 import BookingConsultation from "./Components/BookingConsultation/BookingConsultation"
 import FakeLogin from "./Components/Login/FakeLogin"
+// import FakeNotification from "./Components/Notification/FakeNotification"
+import Notification from "./Components/Notification/Notification"
 
 function App() {
   return (
@@ -20,6 +22,7 @@ function App() {
       <BrowserRouter>
         {/* Display the Navbar component */}
         <Navbar />
+        <Notification />
         {/* Set up the Routes for different pages */}
         <Routes>
           <Route path="/" element={<LandingPage />} />
@@ -28,6 +31,8 @@ function App() {
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
           <Route path="/fake-login" element={<FakeLogin />} />
+          {/* <Route path="/fake-notification" element={<FakeNotification />} /> */}
+          <Route path="/notification" element={<Notification />} />
         </Routes>
       </BrowserRouter>
     </div>

@@ -1,84 +1,91 @@
 .doctor-card-container {
-    width: 300px;
-    height: 100%;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    overflow: hidden;
-    display: inline-block;
-    margin: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-  }
-  .cancel-appointment {
-    background-color: red;
-  }
-  
-  .doctor-card-details-container {
-    padding: 20px;
-  }
-  
-  .doctor-card-profile-image-container {
-    text-align: center;
-    margin-bottom: 10px;
-    /* width: 400px;
+  width: 300px;
+  height: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  display: inline-block;
+  margin: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+.cancel-appointment {
+  /* background-color: red; */
+  background-color: white;
+  color: #ff851b;
+  border: solid;
+  border-color: #ff851b;
+}
+.cancel-appointment:hover {
+  background-color: #c0bebe;
+  color: black;
+}
+
+.doctor-card-details-container {
+  padding: 20px;
+}
+
+.doctor-card-profile-image-container {
+  text-align: center;
+  margin-bottom: 10px;
+  /* width: 400px;
     height: 600px; */
-  }
-  
-  .doctor-card-profile-image-container img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-  }
-  
-  .doctor-card-details {
-    text-align: center;
-  }
-  
-  .doctor-card-detail-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  .doctor-card-detail-speciality {
-    font-size: 16px;
-    margin-bottom: 5px;
-  }
-  
-  .doctor-card-detail-experience {
-    /* margin-top: 2rem; */
-    font-size: 14px;
-    color: #888;
-    margin-bottom: 5px;
-    font-weight: bold;
-  }
-  
-  .doctor-card-detail-location,
-  .doctor-card-detail-clinic,
-  .doctor-card-detail-consultationfees {
-    font-size: 14px;
-    margin-bottom: 5px;
-  }
-  .doctor-card-detail-consultationfees{
-    font-weight: bold;
-    
-  }
-  
-  .book-appoinment-btn {
-    background-color: #ff851b;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .book-appoinment-btn div:nth-child(2) {
-    font-size: 12px;
-    font-weight: bold;
-  }
-  .modal-container {
+}
+
+.doctor-card-profile-image-container img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+}
+
+.doctor-card-details {
+  text-align: center;
+}
+
+.doctor-card-detail-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.doctor-card-detail-speciality {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.doctor-card-detail-experience {
+  /* margin-top: 2rem; */
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.doctor-card-detail-location,
+.doctor-card-detail-clinic,
+.doctor-card-detail-consultationfees {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.doctor-card-detail-consultationfees {
+  font-weight: bold;
+}
+
+.book-appointment-btn {
+  background-color: #ff851b;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.book-appointment-btn div:nth-child(2) {
+  font-size: 12px;
+  font-weight: bold;
+}
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
@@ -117,13 +124,10 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-.doctorbg{
+.doctorbg {
   -webkit-scrollbar {
     display: none;
-}
-
-
-
+  }
 }
 .modal-btn:hover {
   background-color: #0d8af5;
@@ -132,16 +136,22 @@
 .cancel-appointment-btn {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #f44336;
+  /* background-color: #f44336;
   color: #fff;
-  border: none;
+  border: none; */
+  background-color: white;
+  color: #ff851b;
+  border: solid;
+  border-color: #ff851b;
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
 
 .cancel-appointment-btn:hover {
-  background-color: #d63027;
+  /* background-color: #d63027; */
+  background-color: #c0bebe;
+  color: black;
 }
 .appointment-form {
   max-width: 400px;
@@ -187,8 +197,7 @@ button:hover {
   color: black;
 }
 
-
-.btnslot{
+.btnslot {
   background-color: green;
   cursor: pointer;
   /* color: rgb(249, 60, 60); */

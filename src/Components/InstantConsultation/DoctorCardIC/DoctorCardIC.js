@@ -4,6 +4,7 @@ import "reactjs-popup/dist/index.css"
 import "./DoctorCardIC.css"
 import AppointmentFormIC from "../AppointmentFormIC/AppointmentFormIC"
 import { v4 as uuidv4 } from "uuid"
+import Notification from "../../Notification/Notification"
 
 const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => {
   const [showModal, setShowModal] = useState(false)
@@ -28,6 +29,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
     setShowModal(false)
   }
 
+  // define the style of the Book/Cancel appointment style
   const popupStyle = {
     width: "420px",
     height: "700px",
@@ -72,7 +74,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
           style={{ backgroundColor: "#FFFFFF" }}
           contentStyle={popupStyle}
           trigger={
-            <button className={`book-appointment-btn ${appointments.length > 0 ? "cancel-appointment" : ""}`}>
+            <button className={`book-appointment-btn ${appointments.length > 0 ? "cancel-appointment-btn" : ""}`}>
               {appointments.length > 0 ? <div>Cancel Appointment</div> : <div>Book Appointment</div>}
               <div>No Booking Fee</div>
             </button>
@@ -100,7 +102,8 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
 
               {appointments.length > 0 ? (
                 <>
-                <br></br><br></br>
+                  <br></br>
+                  <br></br>
                   <h3 style={{ textAlign: "center" }}>Appointment Booked!</h3>
                   {appointments.map(appointment => (
                     <div className="bookedInfo" key={appointment.id}>
