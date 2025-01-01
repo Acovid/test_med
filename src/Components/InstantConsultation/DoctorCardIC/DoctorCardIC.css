@@ -20,6 +20,8 @@
   .doctor-card-profile-image-container {
     text-align: center;
     margin-bottom: 10px;
+    /* width: 400px;
+    height: 600px; */
   }
   
   .doctor-card-profile-image-container img {

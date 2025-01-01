@@ -26,7 +26,7 @@ const LandingPage = () => {
             <h4>
             Your health is our priority, and we’re here to make accessing medical care easier than ever. With Stay Healthy, you can conveniently book appointments with trusted doctors at a time that works best for you. Whether you need a routine checkup or specialized care, we’ve got you covered. Take the first step toward better health today—your wellness journey starts here!
             </h4>
-            <a href="#services"> {/* Creating a hyperlink to jump to the 'services' section */}
+            <a href="/instant-consultation"> {/* Creating a hyperlink to jump to the 'services' section */}
               <button class="button">Get Started</button> {/* Creating a button with class name 'button' */}
             </a>
         </div>
