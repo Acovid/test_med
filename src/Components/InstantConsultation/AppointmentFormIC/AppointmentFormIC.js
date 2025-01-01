@@ -3,17 +3,20 @@ import React, { useState } from 'react'
 const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
     const [name, setName] = useState('');
     const [phoneNumber, setPhoneNumber] = useState('');
-    const [selectedSlot, setSelectedSlot] = useState(null);
+    const [selectedDate, setSelectedDate] = useState('');
+    const [selectedTime, setSelectedTime] = useState('');
   
-    const handleSlotSelection = (slot) => {
-      setSelectedSlot(slot);
-    };
+    // const handleTimeSelection = (slot) => {
+    //   setSelectedTime(slot);
+    // };
   
     const handleFormSubmit = (e) => {
       e.preventDefault();
-      onSubmit({ name, phoneNumber });
+      onSubmit({ name, phoneNumber, selectedDate, selectedTime });
       setName('');
       setPhoneNumber('');
+      setSelectedDate('');
+      setSelectedTime('');
     };
   
     return (
@@ -39,12 +42,12 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
           />
         </div>
         <div className="form-group">
-          <label htmlFor="selectedSlot">Date of Appointment:</label>
+          <label htmlFor="selectedDate">Date of Appointment:</label>
           <input
             type="date"
-            id="selectedSlot"
-            value={selectedSlot}
-            onChange={(e) => setSelectedSlot(e.target.value)}
+            id="selectedDate"
+            value={selectedDate}
+            onChange={(e) => setSelectedDate(e.target.value)}
             required
           />
         </div>
@@ -52,16 +55,16 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
             <p>
             <b>Book Time Slot:</b>
             </p>
-            <select>
+            <select onChange={(e) => setSelectedTime(e.target.value)}>
                 <option value="">Select a time slot</option>
                 <option value="9:00 AM">9:00 AM</option>
                 <option value="10:00 AM">10:00 AM</option>
                 <option value="11:00 AM">11:00 AM</option>
-                <option value="12:00 AM">12:00 AM</option>
-                <option value="1:00 AM">1:00 AM</option>
-                <option value="2:00 AM">2:00 AM</option>
-                <option value="3:00 AM">3:00 AM</option>
-                <option value="4:00 AM">4:00 AM</option>
+                <option value="12:00 PM">12:00 PM</option>
+                <option value="1:00 PM">1:00 PM</option>
+                <option value="2:00 PM">2:00 PM</option>
+                <option value="3:00 PM">3:00 PM</option>
+                <option value="4:00 PM">4:00 PM</option>
             </select>
         </div>
         

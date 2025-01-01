@@ -93,8 +93,10 @@ button {
   border: none; /* Remove button borders */
   border-radius: 4px; /* Add border radius for rounded corners */
   cursor: pointer; /* Change cursor to pointer on hover */
-  width: 15%;
-  margin-top: 15px;
+  /* width: 15%; */
+  width: 140px;
+  /* margin-top: 15px; */
+  margin: 10px;
 }
 .btn:hover {
   transform: scale(0.98);
