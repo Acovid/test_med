@@ -12,11 +12,10 @@ const LandingPage = () => {
         <div data-aos="fade-up" className="flex-hero">
           {" "}
           {/* Creating a div with data-aos attribute and class name 'flex-hero' */}
-          <h1>
-            Your Health
-            <br />
-            <span className="text-gradient">Our Responsibility</span>
-          </h1>
+          <h1>Stay Healthy </h1>
+          {/* <br />
+          <></> */}
+          <h2 className="text-gradient">Your Health - Our Responsibility</h2>
           <div className="blob-cont">
             {" "}
             {/* Creating a div with class name 'blob-cont' */}
@@ -27,19 +26,20 @@ const LandingPage = () => {
             {/* Creating another div with class name 'blob-cont' */}
             <div className="blue1 blob"></div> {/* Creating a different blue blob inside the second 'blob-cont' div */}
           </div>
+          <br /><br />
           <h4>Your health is our priority, and we’re here to make accessing medical care easier than ever. With Stay Healthy, you can conveniently book appointments with trusted doctors at a time that works best for you. Whether you need a routine checkup or specialized care, we’ve got you covered. Take the first step toward better health today—your wellness journey starts here!</h4>
+          <br />
           {/* buttons */}
           <div>
             <a href="/instant-consultation">
               {" "}
               {/* Creating a hyperlink to jump to the 'services' section */}
-              <button className="btn btn-primary">Get Started</button> {/* Creating a button with class name 'button' */}
+              <button className="btn btn-primary">Get Started</button>
             </a>
-            <a href="/fake-login">
+            {/* <a href="/fake-login">
               {" "}
-              {/* Creating a hyperlink to jump to the 'services' section */}
-              <button className="btn btn-danger">Fake Login</button> {/* Creating a button with class name 'button' */}
-            </a>
+              <button className="btn btn-danger">Fake Login</button>
+            </a> */}
           </div>
         </div>
       </div>

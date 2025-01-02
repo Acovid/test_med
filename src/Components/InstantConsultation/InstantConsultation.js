@@ -3,7 +3,9 @@ import "./InstantConsultation.css"
 import { useNavigate, useSearchParams } from "react-router-dom"
 import FindDoctorSearchIC from "./FindDoctorSearchIC/FindDoctorSearchIC"
 import DoctorCardIC from "./DoctorCardIC/DoctorCardIC"
-import FakeNotification from "../Notification/FakeNotification"
+// import FakeNotification from "../Notification/FakeNotification"
+// import the context provider
+import AppointmentContextProvider from "../../context/AppointmentContextProvider"
 
 const InstantConsultation = () => {
   const [searchParams] = useSearchParams()
@@ -57,24 +59,26 @@ const InstantConsultation = () => {
 
   return (
     <>
-      <center>
-        <div className="searchpage-container search-results-card">
-          <FindDoctorSearchIC onSearch={handleSearch} />
-          <div className="search-results-container">
-            {isSearched ? (
-              <center>
-                <h2>
-                  {filteredDoctors.length} doctors are available {searchParams.get("location")}
-                </h2>
-                <h3>Book appointments with minimum wait-time & verified doctor details</h3>
-                {filteredDoctors.length > 0 ? filteredDoctors.map(doctor => <DoctorCardIC className="doctorcard" {...doctor} key={doctor.name} />) : <p>No doctors found.</p>}
-              </center>
-            ) : (
-              ""
-            )}
+      <AppointmentContextProvider>
+        <center>
+          <div className="searchpage-container search-results-card">
+            <FindDoctorSearchIC onSearch={handleSearch} />
+            <div className="search-results-container">
+              {isSearched ? (
+                <center>
+                  <h2>
+                    {filteredDoctors.length} doctors are available {searchParams.get("location")}
+                  </h2>
+                  <h3>Book appointments with minimum wait-time & verified doctor details</h3>
+                  {filteredDoctors.length > 0 ? filteredDoctors.map(doctor => <DoctorCardIC className="doctorcard" {...doctor} key={doctor.name} />) : <p>No doctors found.</p>}
+                </center>
+              ) : (
+                ""
+              )}
+            </div>
           </div>
-        </div>
-      </center>
+        </center>
+      </AppointmentContextProvider>
     </>
   )
 }

@@ -4,6 +4,8 @@ import React, { useEffect } from "react"
 import { BrowserRouter, Routes, Route } from "react-router-dom"
 // Import CSS
 import "./App.css"
+// import the context provider
+import AppointmentContextProvider from './context/AppointmentContextProvider'
 // Import my components
 import Navbar from "./Components/Navbar/Navbar"
 import LandingPage from "./Components/LandingPage/LandingPage"
@@ -11,7 +13,7 @@ import SignUp from "./Components/SignUp/SignUp"
 import Login from "./Components/Login/Login"
 import InstantConsultation from "./Components/InstantConsultation/InstantConsultation"
 import BookingConsultation from "./Components/BookingConsultation/BookingConsultation"
-import FakeLogin from "./Components/Login/FakeLogin"
+// import FakeLogin from "./Components/Login/FakeLogin"
 // import FakeNotification from "./Components/Notification/FakeNotification"
 import Notification from "./Components/Notification/Notification"
 
@@ -20,6 +22,8 @@ function App() {
     <div className="App">
       {/* Set up BrowserRouterC for routing */}
       <BrowserRouter>
+      {/* Wrap all components into the context provider */}
+      <AppointmentContextProvider>
         {/* Display the Navbar component */}
         <Navbar />
         <Notification />
@@ -30,10 +34,12 @@ function App() {
           <Route path="/booking-consultation" element={<BookingConsultation />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/fake-login" element={<FakeLogin />} />
+          {/* <Route path="/fake-login" element={<FakeLogin />} /> */}
           {/* <Route path="/fake-notification" element={<FakeNotification />} /> */}
           <Route path="/notification" element={<Notification />} />
         </Routes>
+
+      </AppointmentContextProvider>
       </BrowserRouter>
     </div>
   )
