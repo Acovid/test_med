@@ -5,7 +5,7 @@ import FindDoctorSearchIC from "./FindDoctorSearchIC/FindDoctorSearchIC"
 import DoctorCardIC from "./DoctorCardIC/DoctorCardIC"
 // import FakeNotification from "../Notification/FakeNotification"
 // import the context provider
-import AppointmentContextProvider from "../../context/AppointmentContextProvider"
+// import AppointmentContextProvider from "../../context/AppointmentContextProvider"
 
 const InstantConsultation = () => {
   const [searchParams] = useSearchParams()
@@ -59,7 +59,7 @@ const InstantConsultation = () => {
 
   return (
     <>
-      <AppointmentContextProvider>
+      {/* <AppointmentContextProvider> */}
         <center>
           <div className="searchpage-container search-results-card">
             <FindDoctorSearchIC onSearch={handleSearch} />
@@ -78,7 +78,7 @@ const InstantConsultation = () => {
             </div>
           </div>
         </center>
-      </AppointmentContextProvider>
+      {/* </AppointmentContextProvider> */}
     </>
   )
 }

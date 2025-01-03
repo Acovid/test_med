@@ -20,21 +20,20 @@ import Notification from "./Components/Notification/Notification"
 function App() {
   return (
     <div className="App">
-      {/* Set up BrowserRouterC for routing */}
-      <BrowserRouter>
-        {/* Wrap all components into the context provider */}
-        <AppointmentContextProvider>
+      {/* Wrap all components into the context provider */}
+      <AppointmentContextProvider>
+        {/* Set up BrowserRouterC for routing */}
+        <BrowserRouter>
           {/* Display these three components */}
           <Navbar />
-          <LandingPage />
           <Notification />
 
           {/* include all other components so they can access the Context API, but do not show them on the first screen */}
-          <div style={{display: 'none'}}>
+          {/* <div style={{ display: "none" }}>
             <InstantConsultation />
             <Login />
             <SignUp />
-          </div>
+          </div> */}
 
           {/* Set up the Routes for different pages */}
           <Routes>
@@ -47,8 +46,8 @@ function App() {
             {/* <Route path="/fake-notification" element={<FakeNotification />} /> */}
             <Route path="/notification" element={<Notification />} />
           </Routes>
-        </AppointmentContextProvider>
-      </BrowserRouter>
+        </BrowserRouter>
+      </AppointmentContextProvider>
     </div>
   )
 }
