@@ -36,10 +36,10 @@ const LandingPage = () => {
               {/* Creating a hyperlink to jump to the 'services' section */}
               <button className="btn btn-primary">Get Started</button>
             </a>
-            {/* <a href="/fake-login">
+            <a href="/fake-login">
               {" "}
               <button className="btn btn-danger">Fake Login</button>
-            </a> */}
+            </a>
           </div>
         </div>
       </div>

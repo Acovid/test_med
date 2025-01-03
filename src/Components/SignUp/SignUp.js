@@ -61,30 +61,29 @@ const SignUp = () => {
   // JSX to render the Sign Up form
   return (
     <div className="container" style={{ marginTop: "5%" }}>
-    {/*  Main container with margin-top  */}
+      {/*  Main container with margin-top  */}
 
-    <div className="signup-grid signup-card">
-      {/*  Grid layout for sign-up form  */}
+      <div className="signup-grid signup-card">
+        {/*  Grid layout for sign-up form  */}
 
-      <div className="signup-text">
-        {/*  Title for the sign-up form  */}
-        <h1>Sign Up</h1>
-      </div>
-      <div className="signup-text1">
-        {/*  Text for existing members to log in  */}
-        Already a member?{" "}
-        <span>
-          <a href="/Login" style={linkStyle}>
-            Login
-          </a>
-        </span>
-      </div>
+        <div className="signup-text">
+          {/*  Title for the sign-up form  */}
+          <h1>Sign Up</h1>
+        </div>
+        <div className="signup-text1">
+          {/*  Text for existing members to log in  */}
+          Already a member?{" "}
+          <span>
+            <a href="/Login" style={linkStyle}>
+              Login
+            </a>
+          </span>
+        </div>
 
-      <div className="signup-form">
-        {/*  Form for user sign-up  */}
-        <form method="POST" onSubmit={register}>
-
-          {/* <div className="form-group">
+        <div className="signup-form">
+          {/*  Form for user sign-up  */}
+          <form method="POST" onSubmit={register}>
+            {/* <div className="form-group">
             <label htmlFor="role">Role</label>
             <select name="role" id="role" style={{ padding: "6px" }}>
               <option value="doctor">Doctor</option>
@@ -93,45 +92,44 @@ const SignUp = () => {
           </div> */}
 
             <div className="form-group">
-                <label htmlFor="email">Email</label>
-                <input value={email} onChange={(e) => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" required/>
-                {/* {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>} */}
+              <label htmlFor="email">Email</label>
+              <input value={email} onChange={e => setEmail(e.target.value)} type="email" name="email" id="email" className="form-control" placeholder="Enter your email" aria-describedby="helpId" required />
+              {/* {showerr && <div className="err" style={{ color: 'red' }}>{showerr}</div>} */}
             </div>
 
             <div className="form-group">
-                <label htmlFor="name">Name</label>
-                <input value={name} type="text" onChange={(e) => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" minLength="4" required/>
-                <p className="input-field-rule">Name must have at least 4 characters</p>
+              <label htmlFor="name">Name</label>
+              <input value={name} type="text" onChange={e => setName(e.target.value)} name="name" id="name" className="form-control" placeholder="Enter your name" aria-describedby="helpId" minLength="4" required />
+              <p className="input-field-rule">Name must have at least 4 characters</p>
             </div>
             <div className="form-group">
-                <label htmlFor="phone">Phone</label>
-                <input value={phone} onChange={(e) => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" minLength="10" maxLength="10" required/>
-                <p className="input-field-rule">Phone number should be 10 Digits</p>
+              <label htmlFor="phone">Phone</label>
+              <input value={phone} onChange={e => setPhone(e.target.value)} type="tel" name="phone" id="phone" className="form-control" placeholder="Enter your phone number" aria-describedby="helpId" minLength="10" maxLength="10" required />
+              <p className="input-field-rule">Phone number must have 10 Digits</p>
             </div>
             <div className="form-group">
-                <label htmlFor="password">Password</label>
-                <input value={password} onChange={(e) => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" minLength="8" required/>
-                <p className="input-field-rule">Password must have at least 8 characters</p>
+              <label htmlFor="password">Password</label>
+              <input value={password} onChange={e => setPassword(e.target.value)} name="password" id="password" className="form-control" placeholder="Enter your password" aria-describedby="helpId" minLength="8" required />
+              <p className="input-field-rule">Password must have at least 8 characters</p>
             </div>
 
-          <div className="btn-group">
-            {/*  Button group for form submission and reset  */}
-            <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
-              Submit
-            </button>
-            {/*  Submit button  */}
-            <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">
-              Reset
-            </button>
-            {/*  Reset button  */}
-          </div>
-        </form>
-        {/*  End of the form  */}
+            <div className="btn-group">
+              {/*  Button group for form submission and reset  */}
+              <button type="submit" className="btn btn-primary mb-2 mr-1 waves-effect waves-light">
+                Submit
+              </button>
+              {/*  Submit button  */}
+              <button type="reset" className="btn btn-danger mb-2 waves-effect waves-light">
+                Reset
+              </button>
+              {/*  Reset button  */}
+            </div>
+          </form>
+          {/*  End of the form  */}
+        </div>
       </div>
     </div>
-  </div>
-
-)
+  )
 }
 
 // Export the component

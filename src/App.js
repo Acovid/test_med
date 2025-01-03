@@ -13,7 +13,7 @@ import SignUp from "./Components/SignUp/SignUp"
 import Login from "./Components/Login/Login"
 import InstantConsultation from "./Components/InstantConsultation/InstantConsultation"
 import BookingConsultation from "./Components/BookingConsultation/BookingConsultation"
-// import FakeLogin from "./Components/Login/FakeLogin"
+import FakeLogin from "./Components/Login/FakeLogin"
 // import FakeNotification from "./Components/Notification/FakeNotification"
 import Notification from "./Components/Notification/Notification"
 
@@ -34,7 +34,7 @@ function App() {
           <Route path="/booking-consultation" element={<BookingConsultation />} />
           <Route path="/sign-up" element={<SignUp />} />
           <Route path="/login" element={<Login />} />
-          {/* <Route path="/fake-login" element={<FakeLogin />} /> */}
+          <Route path="/fake-login" element={<FakeLogin />} />
           {/* <Route path="/fake-notification" element={<FakeNotification />} /> */}
           <Route path="/notification" element={<Notification />} />
         </Routes>
