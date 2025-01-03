@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 // Import CSS
 import "./App.css"
 // import the context provider
-import AppointmentContextProvider from './context/AppointmentContextProvider'
+import AppointmentContextProvider from "./context/AppointmentContextProvider"
 // Import my components
 import Navbar from "./Components/Navbar/Navbar"
 import LandingPage from "./Components/LandingPage/LandingPage"
@@ -22,24 +22,32 @@ function App() {
     <div className="App">
       {/* Set up BrowserRouterC for routing */}
       <BrowserRouter>
-      {/* Wrap all components into the context provider */}
-      <AppointmentContextProvider>
-        {/* Display the Navbar component */}
-        <Navbar />
-        <Notification />
-        {/* Set up the Routes for different pages */}
-        <Routes>
-          <Route path="/" element={<LandingPage />} />
-          <Route path="/instant-consultation" element={<InstantConsultation />} />
-          <Route path="/booking-consultation" element={<BookingConsultation />} />
-          <Route path="/sign-up" element={<SignUp />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/fake-login" element={<FakeLogin />} />
-          {/* <Route path="/fake-notification" element={<FakeNotification />} /> */}
-          <Route path="/notification" element={<Notification />} />
-        </Routes>
+        {/* Wrap all components into the context provider */}
+        <AppointmentContextProvider>
+          {/* Display these three components */}
+          <Navbar />
+          <LandingPage />
+          <Notification />
 
-      </AppointmentContextProvider>
+          {/* include all other components so they can access the Context API, but do not show them on the first screen */}
+          <div style={{display: 'none'}}>
+            <InstantConsultation />
+            <Login />
+            <SignUp />
+          </div>
+
+          {/* Set up the Routes for different pages */}
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route path="/instant-consultation" element={<InstantConsultation />} />
+            <Route path="/booking-consultation" element={<BookingConsultation />} />
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/fake-login" element={<FakeLogin />} />
+            {/* <Route path="/fake-notification" element={<FakeNotification />} /> */}
+            <Route path="/notification" element={<Notification />} />
+          </Routes>
+        </AppointmentContextProvider>
       </BrowserRouter>
     </div>
   )
