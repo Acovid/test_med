@@ -9,6 +9,15 @@ import Notification from "../../Notification/Notification"
 const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => {
   const [showModal, setShowModal] = useState(false)
   const [appointments, setAppointments] = useState([])
+  const [doctorData, setDoctorData] = useState(null)
+
+  const doctor = {
+    name: name,
+    speciality: speciality
+  }
+
+  // Store doctor data to local storage
+  localStorage.setItem("doctorData", JSON.stringify(doctor))
 
   const handleBooking = () => {
     setShowModal(true)
@@ -24,8 +33,17 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
       id: uuidv4(),
       ...appointmentData
     }
+    console.log("FROM DoctorCardIC.js\n")
+    // const doctorFromLocalStorage = localStorage.getItem("doctorData")
+    console.log("Doctor data from Local storage: ", localStorage.getItem("doctorData"))
+    console.log("newAppointment: ", newAppointment, "\n")
+    console.log("appointmentData: ", appointmentData, "\n")
     const updatedAppointments = [...appointments, newAppointment]
+    console.log("updatedAppointments: ", updatedAppointments, "\n")
+    // Store appointment data under "storedDoctorData" in local storage
+    // localStorage.setItem("storedDoctorData", updatedAppointments)
     setAppointments(updatedAppointments)
+    console.log("appointments: ", appointments)
     setShowModal(false)
   }
 
@@ -42,8 +60,6 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
     border: "solid 1px #f5e0db",
     backgroundColor: "#fff"
   }
-
-  // console.log('appointment name:', appointment.name)
 
   return (
     <div className="doctor-card-container">

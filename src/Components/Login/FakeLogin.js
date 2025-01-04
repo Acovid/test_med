@@ -13,7 +13,7 @@ const FakeLogin = () => {
     if (sessionStorage.getItem("auth-token")) {
       navigate("/")
     } else {
-      sessionStorage.setItem("auth-token", "email: aco@mail.com")
+      // sessionStorage.setItem("auth-token", "email: aco@mail.com")
       sessionStorage.setItem("email", "aco@mail.com")
       // Redirect to home page and reload the window
       navigate("/")
