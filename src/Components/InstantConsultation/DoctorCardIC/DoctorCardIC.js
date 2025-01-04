@@ -26,6 +26,8 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
   const handleCancel = appointmentId => {
     const updatedAppointments = appointments.filter(appointment => appointment.id !== appointmentId)
     setAppointments(updatedAppointments)
+    // remove appointment from teh local storage
+    localStorage.removeItem("appointmentData")
   }
 
   const handleFormSubmit = appointmentData => {

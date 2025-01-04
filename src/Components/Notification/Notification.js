@@ -17,10 +17,6 @@ const Notification = ({ children }) => {
     const storedUsername = sessionStorage.getItem("email")
     const storedDoctorData = JSON.parse(localStorage.getItem("doctorData"))
     const storedAppointmentData = JSON.parse(localStorage.getItem("appointmentData"))
-    // console.log("FROM Notification.js\n")
-    // console.log("storedUsername: ", storedUsername)
-    // console.log("storedDoctorData: ", storedDoctorData)
-    // console.log("storedAppointmentData: ", storedAppointmentData)
 
     // Set isLoggedIn state to true and update username if storedUsername exists
     if (storedUsername) {
