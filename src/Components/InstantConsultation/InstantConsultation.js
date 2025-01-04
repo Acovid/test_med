@@ -137,8 +137,8 @@ const InstantConsultation = () => {
 ]
 
   const getDoctorsDetails = () => {
-    // fetch("https://api.npoint.io/9a5543d36f1460da2f63")
-    fetch(doctorsCatalog)
+    fetch("https://api.npoint.io/9a5543d36f1460da2f63")
+    // fetch(doctorsCatalog)
       .then(res => res.json())
       .then(data => {
         if (searchParams.get("speciality")) {

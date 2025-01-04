@@ -23,7 +23,7 @@ const Navbar = () => {
       // if email exists in the session storage
       const email = sessionStorage.getItem("email")
       userName = email.substring(0, email.indexOf("@"))
-      console.log(`Session storage: \n email: ${email} \n userName: ${userName}`)
+      // console.log(`Session storage: \n email: ${email} \n userName: ${userName}`)
       // console.log("userName: ", userName)
       // in navbar display the welcome message and Logout button
       userIsLoggedin()

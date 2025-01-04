@@ -16,10 +16,11 @@ const Notification = ({ children }) => {
     // Retrieve stored username, doctor data, and appointment data from sessionStorage and localStorage
     const storedUsername = sessionStorage.getItem("email")
     const storedDoctorData = JSON.parse(localStorage.getItem("doctorData"))
-    const storedAppointmentData = JSON.parse(localStorage.getItem(storedDoctorData?.name))
-    console.log("storedUsername: ", storedUsername)
-    console.log("storedDoctorData: ", storedDoctorData)
-    console.log("storedAppointmentData: ", storedAppointmentData)
+    const storedAppointmentData = JSON.parse(localStorage.getItem("appointmentData"))
+    // console.log("FROM Notification.js\n")
+    // console.log("storedUsername: ", storedUsername)
+    // console.log("storedDoctorData: ", storedDoctorData)
+    // console.log("storedAppointmentData: ", storedAppointmentData)
 
     // Set isLoggedIn state to true and update username if storedUsername exists
     if (storedUsername) {
@@ -48,33 +49,37 @@ const Notification = ({ children }) => {
       {/* Display appointment details if user is logged in and appointmentData is available */}
       {isLoggedIn && appointmentData && (
         <>
-        <div className="appointment-card">
-          <div className="appointment-card__content">
-            {/* Display title for appointment details */}
-            <h3 className="appointment-card__title mb-4">Appointment Details</h3>
-            <p className="appointment-card__message">
-              {/* Display doctor's name from doctorData */}
-              <strong>Doctor:</strong> {doctorData?.name}
-            </p>
-            <p className="appointment-card__message">
-              {/* Display doctor's speciality from doctorData */}
-              <strong>Speciality:</strong> {doctorData?.speciality}
-            </p>
-            <p className="appointment-card__message">
-              {/* Display user name */}
-              <strong>User:</strong> {username}
-            </p>
-            <p className="appointment-card__message">
-              {/* Display user's phone number */}
-              <strong>Phone number:</strong> {username}
-            </p>
-            <p className="appointment-card__message">
-              {/* Display appointment date and time */}
-              <strong>Appointment data:</strong> {appointmentData}
-            </p>
+          <div className="appointment-card">
+            <div className="appointment-card__content">
+              {/* Display title for appointment details */}
+              <h3 className="appointment-card__title mb-4">Appointment Details</h3>
+              <p className="appointment-card__message">
+                {/* Display doctor's name from doctorData */}
+                <strong>Doctor:</strong> {doctorData?.name}
+              </p>
+              <p className="appointment-card__message">
+                {/* Display doctor's speciality from doctorData */}
+                <strong>Speciality:</strong> {doctorData?.speciality}
+              </p>
+              <p className="appointment-card__message">
+                {/* Display user name */}
+                <strong>Name:</strong> {appointmentData?.name}
+              </p>
+              <p className="appointment-card__message">
+                {/* Display user's phone number */}
+                <strong>Phone number:</strong> {appointmentData?.phone}
+              </p>
+              <p className="appointment-card__message">
+                {/* Display appointment date */}
+                <strong>Date of appointment:</strong> {appointmentData?.date}
+              </p>
+              <p className="appointment-card__message">
+                {/* Display appointment time */}
+                <strong>Time:</strong> {appointmentData?.time}
+              </p>
+            </div>
           </div>
-        </div>
-      </>
+        </>
       )}
     </div>
   )

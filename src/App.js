@@ -14,7 +14,7 @@ import Login from "./Components/Login/Login"
 import InstantConsultation from "./Components/InstantConsultation/InstantConsultation"
 import BookingConsultation from "./Components/BookingConsultation/BookingConsultation"
 import FakeLogin from "./Components/Login/FakeLogin"
-// import FakeNotification from "./Components/Notification/FakeNotification"
+import FakeNotification from "./Components/Notification/FakeNotification"
 import Notification from "./Components/Notification/Notification"
 
 function App() {
@@ -27,7 +27,7 @@ function App() {
           {/* Display these three components */}
           <Navbar />
           <Notification />
-
+          {/* <FakeNotification/> */}
           {/* include all other components so they can access the Context API, but do not show them on the first screen */}
           {/* <div style={{ display: "none" }}>
             <InstantConsultation />
