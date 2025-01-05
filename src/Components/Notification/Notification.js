@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+// import { useNavigate } from "react-router-dom"
 import Navbar from "../Navbar/Navbar"
 import "./Notification.css"
 
@@ -10,6 +11,19 @@ const Notification = ({ children }) => {
   const [doctorData, setDoctorData] = useState(null)
   const [appointmentData, setAppointmentData] = useState(null)
   const [notificationIsVisible, setNotificationIsVisible] = useState(false)
+
+  // useEffect to monitor changes in local storage and react appropriately
+  useEffect(() => {
+    const handleStorage = () => {
+      // Place for a function responsible for
+      // pulling and displaying local storage data
+      const appData = localStorage.getItem("appointmentData")
+      console.log("appData: ", appData)
+    }
+
+    window.addEventListener("storage", handleStorage())
+    return () => window.removeEventListener("storage", handleStorage())
+  }, [])
 
   // useEffect hook to perform side effects in the component
   useEffect(() => {
@@ -33,7 +47,16 @@ const Notification = ({ children }) => {
     if (storedAppointmentData) {
       setAppointmentData(storedAppointmentData)
     }
+
+    // add event listener for changes in local stoeage
+    window.addEventListener("storage", storedAppointmentData)
+
+    return () => {
+      window.removeEventListener("storage", storedAppointmentData)
+    }
   }, []) // Empty dependency array ensures useEffect runs only once after initial render
+
+  // const navigate = useNavigate()
 
   // Return JSX elements to display Navbar, children components, and appointment details if user is logged in
   return (

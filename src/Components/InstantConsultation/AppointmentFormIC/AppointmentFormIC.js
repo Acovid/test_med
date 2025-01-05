@@ -27,7 +27,7 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
       date: selectedDate,
       time: selectedTime
     }
-    console.log(`FROM AppointmentFormIC.js\nname: ${name}\nphone: ${phoneNumber}\ndate: ${selectedDate}\ntime: ${selectedTime}\n`)
+    console.log(`FROM AppointmentFormIC.js - I booked this appointment:\nname: ${name}\nphone: ${phoneNumber}\ndate: ${selectedDate}\ntime: ${selectedTime}\n`)
     // Store appointment data to local storage
     localStorage.setItem("appointmentData", JSON.stringify(appointment))
   }

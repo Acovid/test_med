@@ -1,10 +1,10 @@
 .appointment-card {
   background: white;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   right: 0;
   border: solid 1px #f5e0db;
-  padding: 10px;
+  padding: 20px;
   text-align: left;
 }
 

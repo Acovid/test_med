@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react"
+// import { useNavigate } from "react-router-dom"
 import Popup from "reactjs-popup"
 import "reactjs-popup/dist/index.css"
 import "./DoctorCardIC.css"
@@ -24,11 +25,18 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
     setShowModal(true)
   }
 
+  // const navigate = useNavigate()
+
   const handleCancel = appointmentId => {
     const updatedAppointments = appointments.filter(appointment => appointment.id !== appointmentId)
     setAppointments(updatedAppointments)
     // remove appointment from teh local storage
     localStorage.removeItem("appointmentData")
+    localStorage.removeItem("doctorData")
+    console.log("From DoctorCardIC.js:\nI removed the appointment data from local storage")
+
+    // navigate("/notification")
+    // setShowModal(false)
   }
 
   const handleFormSubmit = appointmentData => {
@@ -36,17 +44,10 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
       id: uuidv4(),
       ...appointmentData
     }
-    console.log("FROM DoctorCardIC.js\n")
-    // const doctorFromLocalStorage = localStorage.getItem("doctorData")
-    console.log("Doctor data from Local storage: ", localStorage.getItem("doctorData"))
-    console.log("newAppointment: ", newAppointment, "\n")
-    console.log("appointmentData: ", appointmentData, "\n")
     const updatedAppointments = [...appointments, newAppointment]
-    console.log("updatedAppointments: ", updatedAppointments, "\n")
     // Store appointment data under "storedDoctorData" in local storage
     // localStorage.setItem("storedDoctorData", updatedAppointments)
     setAppointments(updatedAppointments)
-    console.log("appointments: ", appointments)
     setShowModal(false)
   }
 
@@ -102,11 +103,12 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
           {close => (
             <div className="doctorbg" style={{ height: "100vh", overflow: "scroll" }}>
               <div>
-                <div className="doctor-card-profile-image-container">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
+                <div className="doctor-card-profile-image-container-small">
+                  {/* <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
                     {" "}
                     <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />{" "}
-                  </svg>
+                  </svg> */}
+                  <img src={picture} alt="Doctor" width="10px" height="10px" />
                 </div>
                 <div className="doctor-card-details">
                   <div className="doctor-card-detail-name">{name}</div>
@@ -126,9 +128,9 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
                       <br></br>
                       <br></br>
                       <br></br>
-                      <div style={{ background: "#F5F5F5", padding: "10px", borderRadius: "10px" }}>
+                      <div style={{ background: "#F5F5F5", padding: "20px", borderRadius: "10px" }}>
                         <p>Name: {appointment.name}</p>
-                        <p>Phone Number: {appointment.phoneNumber}</p>
+                        <p>Phone Number: {appointment.phoneNumber}</p><br />
                         <p>Date: {appointment.selectedDate}</p>
                         <p>Time: {appointment.selectedTime}</p>
                       </div>

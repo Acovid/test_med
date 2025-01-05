@@ -56,6 +56,7 @@ const InstantConsultation = () => {
     getDoctorsDetails()
     const authtoken = sessionStorage.getItem("auth-token")
     if (!authtoken) {
+      alert("To get doctors details, please login.")
       navigate("/login")
     }
   }, [searchParams])

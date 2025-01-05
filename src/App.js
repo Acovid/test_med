@@ -5,7 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 // Import CSS
 import "./App.css"
 // import the context provider
-import AppointmentContextProvider from "./context/AppointmentContextProvider"
+// import AppointmentContextProvider from "./context/AppointmentContextProvider"
 // Import my components
 import Navbar from "./Components/Navbar/Navbar"
 import LandingPage from "./Components/LandingPage/LandingPage"
@@ -21,20 +21,11 @@ function App() {
   return (
     <div className="App">
       {/* Wrap all components into the context provider */}
-      <AppointmentContextProvider>
+      {/* <AppointmentContextProvider> */}
         {/* Set up BrowserRouterC for routing */}
         <BrowserRouter>
-          {/* Display these three components */}
           <Navbar />
           <Notification />
-          {/* <FakeNotification/> */}
-          {/* include all other components so they can access the Context API, but do not show them on the first screen */}
-          {/* <div style={{ display: "none" }}>
-            <InstantConsultation />
-            <Login />
-            <SignUp />
-          </div> */}
-
           {/* Set up the Routes for different pages */}
           <Routes>
             <Route path="/" element={<LandingPage />} />
@@ -43,11 +34,10 @@ function App() {
             <Route path="/sign-up" element={<SignUp />} />
             <Route path="/login" element={<Login />} />
             <Route path="/fake-login" element={<FakeLogin />} />
-            {/* <Route path="/fake-notification" element={<FakeNotification />} /> */}
             <Route path="/notification" element={<Notification />} />
           </Routes>
         </BrowserRouter>
-      </AppointmentContextProvider>
+      {/* </AppointmentContextProvider> */}
     </div>
   )
 }

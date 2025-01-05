@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react"
-import "./BookingConsultation.css"
 import { useNavigate, useSearchParams } from "react-router-dom"
 import FindDoctorSearchIC from "../InstantConsultation/FindDoctorSearchIC/FindDoctorSearchIC"
 import DoctorCardIC from "../InstantConsultation/DoctorCardIC/DoctorCardIC"
+import "./BookingConsultation.css"
 
 const BookingConsultation = () => {
   const [searchParams] = useSearchParams()
