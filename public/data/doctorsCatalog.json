@@ -1,0 +1,243 @@
+[
+  {
+    "name": "Dr. Jiao Yang",
+    "ratings": "⭐⭐⭐⭐⭐",
+    "experience": 9,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/yang.png"
+  },
+  {
+    "name": "Dr. Denis Raj",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 24,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/raj.png"
+  },
+  {
+    "name": "Dr. Lyn Christie",
+    "ratings": "⭐⭐⭐",
+    "experience": 11,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/christie.png"
+  },
+  {
+    "name": "Dr. Jessica White",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 18,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/white.png"
+  },
+
+  {
+    "name": "Dr. Elizabeth Clark",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 11,
+    "speciality": "Gynecologist/Obstetrician",
+    "picture": "/images/doctors/clark_elisabeth.png"
+  },
+  {
+    "name": "Dr. Eugene J. Turner",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 40,
+    "speciality": "Gynecologist/Obstetrician",
+    "picture": "/images/doctors/turner_eugene.png"
+  },
+  {
+    "name": "Dr. Alan Dalkin",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 33,
+    "speciality": "Gynecologist/Obstetrician",
+    "picture": "/images/doctors/dalkin.png"
+  },
+  {
+    "name": "Dr. Richard Pearson",
+    "ratings": "⭐⭐⭐",
+    "experience": 40,
+    "speciality": "General Physician",
+    "picture": "/images/doctors/pearson.png"
+  },
+  {
+    "name": "Dr. Mark D. Okusa",
+    "ratings": "⭐⭐⭐",
+    "experience": 3,
+    "speciality": "General Physician",
+    "picture": "/images/doctors/okusa.png"
+  },
+  {
+    "name": "Dr. Sarah Johnson",
+    "ratings": "⭐⭐⭐⭐⭐",
+    "experience": 9,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/johnson.png"
+  },
+  {
+    "name": "Dr. David Anderson",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 24,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/anderson.png"
+  },
+  {
+    "name": "Dr. Kevin Miller",
+    "ratings": "⭐⭐⭐⭐⭐",
+    "experience": 11,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/miller.png"
+  },
+  {
+    "name": " Dr. Stephny Grosh",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 18,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/grosh.png"
+  },
+
+  {
+    "name": "Dr. Emily Clark",
+    "ratings": "⭐⭐⭐⭐⭐",
+    "experience": 11,
+    "speciality": "Gynecologist/Obstetrician",
+    "picture": "/images/doctors/clark_emily.png"
+  },
+  {
+    "name": "Dr. Samantha Turner",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 40,
+    "speciality": "Gynecologist/Obstetrician",
+    "picture": "/images/doctors/turner_samantha.png"
+  },
+  {
+    "name": "Dr. Rachel Parker",
+    "ratings": "⭐⭐⭐",
+    "experience": 33,
+    "speciality": "Gynecologist/Obstetrician",
+    "picture": "/images/doctors/parker.png"
+  },
+  {
+    "name": "Dr. Michael Smith",
+    "ratings": "⭐⭐⭐⭐⭐",
+    "experience": 40,
+    "speciality": "General Physician",
+    "picture": "/images/doctors/smith.png"
+  },
+  {
+    "name": "Dr. Laura Taylor",
+    "ratings": "⭐⭐⭐",
+    "experience": 3,
+    "speciality": "General Physician",
+    "picture": "/images/doctors/taylor.png"
+  },
+  {
+    "name": "Dr. Mary Taylor",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 5,
+    "speciality": "Dermatologist",
+    "picture": "/images/doctors/taylor.png"
+  },
+  {
+    "name": "Dr. Steve Smith",
+    "ratings": "⭐⭐⭐⭐⭐",
+    "experience": 35,
+    "speciality": "Dermatologist",
+    "picture": "/images/doctors/smith.png"
+  },
+  {
+    "name": "Dr. Susan Parker",
+    "ratings": "⭐⭐⭐",
+    "experience": 33,
+    "speciality": "Dermatologist",
+    "picture": "/images/doctors/parker.png"
+  },
+  {
+    "name": "Dr. Lin Yang",
+    "ratings": "⭐⭐⭐⭐⭐",
+    "experience": 9,
+    "speciality": "Ear-nose-throat (ent) Specialist",
+    "picture": "/images/doctors/yang.png"
+  },
+  {
+    "name": "Dr. Morten Raj",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 24,
+    "speciality": "Ear-nose-throat (ent) Specialist",
+    "picture": "/images/doctors/raj.png"
+  },
+  {
+    "name": "Dr. Pamela Christie",
+    "ratings": "⭐⭐⭐",
+    "experience": 11,
+    "speciality": "Ear-nose-throat (ent) Specialist",
+    "picture": "/images/doctors/christie.png"
+  },
+  {
+    "name": "Dr. Camila White",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 18,
+    "speciality": "Ear-nose-throat (ent) Specialist",
+    "picture": "/images/doctors/white.png"
+  },
+
+  {
+    "name": "Dr. Kimberly Clark",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 11,
+    "speciality": "Ear-nose-throat (ent) Specialist",
+    "picture": "/images/doctors/clark_elisabeth.png"
+  },
+  {
+    "name": "Dr. Emanuel Turner",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 40,
+    "speciality": "Homeopath",
+    "picture": "/images/doctors/turner_eugene.png"
+  },
+  {
+    "name": "Dr. Ewan Dalkin",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 33,
+    "speciality": "Homeopath",
+    "picture": "/images/doctors/dalkin.png"
+  },
+  {
+    "name": "Dr. Anthony Pearson",
+    "ratings": "⭐⭐⭐",
+    "experience": 40,
+    "speciality": "Homeopath",
+    "picture": "/images/doctors/pearson.png"
+  },
+  {
+    "name": "Dr. Thorsten Okusa",
+    "ratings": "⭐⭐⭐",
+    "experience": 3,
+    "speciality": "Homeopath",
+    "picture": "/images/doctors/okusa.png"
+  },
+  {
+    "name": "Dr. Deborah Johnson",
+    "ratings": "⭐⭐⭐⭐⭐",
+    "experience": 9,
+    "speciality": "Homeopath",
+    "picture": "/images/doctors/johnson.png"
+  },
+  {
+    "name": "Dr. Melanie White",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 18,
+    "speciality": "Ayurveda",
+    "picture": "/images/doctors/white.png"
+  },
+  {
+    "name": "Dr. Marylin Clark",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 11,
+    "speciality": "Ayurveda",
+    "picture": "/images/doctors/clark_elisabeth.png"
+  },
+  {
+    "name": "Dr. Thomas Turner",
+    "ratings": "⭐⭐⭐⭐",
+    "experience": 40,
+    "speciality": "Ayurveda",
+    "picture": "/images/doctors/turner_eugene.png"
+  }
+]

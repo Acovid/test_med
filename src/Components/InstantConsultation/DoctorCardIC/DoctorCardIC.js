@@ -6,14 +6,11 @@ import AppointmentFormIC from "../AppointmentFormIC/AppointmentFormIC"
 import { v4 as uuidv4 } from "uuid"
 import Notification from "../../Notification/Notification"
 
-const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => {
+// const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => {
+const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
   const [showModal, setShowModal] = useState(false)
   const [appointments, setAppointments] = useState([])
   const [doctorData, setDoctorData] = useState(null)
-
-  // console.log("From DoctorCardIC.js:", profilePic);
-  // console.log(typeof(profilePic));
-  
 
   const doctor = {
     name: name,
@@ -71,12 +68,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => 
     <div className="doctor-card-container">
       <div className="doctor-card-details-container">
         <div className="doctor-card-profile-image-container">
-          {/* <svg src={profilePic} width="46" height="46" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
-            {" "}
-            <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />{" "}
-          </svg> */}
-          {/* <img src={require("./pictures/yang.png")} alt="Doctor" /> */}
-          <img src={profilePic} alt="Doctor" />
+          <img src={picture} alt="Doctor" />
         </div>
         <div className="doctor-card-details">
           <div className="doctor-card-detail-name">{name}</div>
