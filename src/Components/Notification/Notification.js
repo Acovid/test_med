@@ -74,11 +74,11 @@ const Notification = ({ children }) => {
               <h3 className="appointment-card__title mb-4">Appointment Details</h3>
               <p className="appointment-card__message">
                 {/* Display doctor's name from doctorData */}
-                <strong>Doctor:</strong> {doctorData?.name}
+                <strong>Doctor:</strong> {appointmentData?.doctorName}
               </p>
               <p className="appointment-card__message">
                 {/* Display doctor's speciality from doctorData */}
-                <strong>Speciality:</strong> {doctorData?.speciality}
+                <strong>Speciality:</strong> {appointmentData?.doctorSpeciality}
               </p>
               <p className="appointment-card__message">
                 {/* Display user name */}

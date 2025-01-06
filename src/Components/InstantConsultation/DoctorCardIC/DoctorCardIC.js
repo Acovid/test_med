@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-// import { useNavigate } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 import Popup from "reactjs-popup"
 import "reactjs-popup/dist/index.css"
 import "./DoctorCardIC.css"
@@ -13,30 +13,47 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
   const [appointments, setAppointments] = useState([])
   const [doctorData, setDoctorData] = useState(null)
 
-  const doctor = {
-    name: name,
-    speciality: speciality
-  }
+  // const doctor = {
+  //   name,
+  //   speciality
+  // }
 
-  // Store doctor data to local storage
-  localStorage.setItem("doctorData", JSON.stringify(doctor))
+  // setDoctorData(doctor)
+
+  // Get doctor name from appointments in local storage
+  let oldAppointment = ""
+  let doctorWithAppointment = ""
+  try {
+    oldAppointment = JSON.parse(localStorage.getItem("appointmentData"))
+    doctorWithAppointment = oldAppointment.doctorName
+  } catch (error) {
+    console.log("There is no appointment in local storage.")
+  }
+  // console.log("oldAppointment: ", oldAppointment);
+  // console.log("type of oldAppointment: ", typeof(oldAppointment));
+  // console.log("doctorWithAppointment: ", doctorWithAppointment);
 
   const handleBooking = () => {
     setShowModal(true)
   }
 
-  // const navigate = useNavigate()
+  const navigate = useNavigate()
 
   const handleCancel = appointmentId => {
     const updatedAppointments = appointments.filter(appointment => appointment.id !== appointmentId)
     setAppointments(updatedAppointments)
     // remove appointment from teh local storage
     localStorage.removeItem("appointmentData")
-    localStorage.removeItem("doctorData")
+    // localStorage.removeItem("doctorData")
+    // window.localStorage.clear()
     console.log("From DoctorCardIC.js:\nI removed the appointment data from local storage")
-
-    // navigate("/notification")
+    window.location.reload()
     // setShowModal(false)
+  }
+
+  const handleCancelTwo = () => {
+    localStorage.removeItem("appointmentData")
+    window.location.reload()
   }
 
   const handleFormSubmit = appointmentData => {
@@ -51,6 +68,11 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
     setShowModal(false)
   }
 
+  // this function returns true if there is already appointment with this doctor
+  // const doctorWithAppointment = () => {
+  //   console.log("this function returns true if there is already appointment with this doctor")
+  // }
+
   // define the style of the Book/Cancel appointment style
   const popupStyle = {
     width: "420px",
@@ -64,6 +86,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
     border: "solid 1px #f5e0db",
     backgroundColor: "#fff"
   }
+  // console.log("doctorData: ", doctorData)
 
   return (
     <div className="doctor-card-container">
@@ -91,8 +114,13 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
           style={{ backgroundColor: "#FFFFFF" }}
           contentStyle={popupStyle}
           trigger={
-            <button className={`book-appointment-btn ${appointments.length > 0 ? "cancel-appointment-btn" : ""}`}>
-              {appointments.length > 0 ? <div>Cancel Appointment</div> : <div>Book Appointment</div>}
+            <button className={`book-appointment-btn ${doctorWithAppointment === name ? "cancel-appointment-btn" : ""}`}>
+              {console.log("Doctor with old appointment: ", doctorWithAppointment)}
+              {console.log("Current doctor: ", name)}
+              {/* {doctorWithAppointment()} */}
+              {/* {appointments.length > 0 ? <div>Cancel Appointment</div> : <div>Book Appointment</div>} */}
+              {doctorWithAppointment === name ? console.log("Show Cancel app. button") : console.log("Show Book app. button")}
+              {doctorWithAppointment === name ? <div onClick={() => handleCancelTwo()}>Cancel Appointment</div> : <div>Book Appointment</div>}
               <div>No Booking Fee</div>
             </button>
           }
@@ -101,7 +129,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
           onClose={() => setShowModal(false)}
         >
           {close => (
-            <div className="doctorbg" style={{ height: "100vh"}}>
+            <div className="doctorbg" style={{ height: "100vh" }}>
               <div>
                 <div className="doctor-card-profile-image-container-small">
                   {/* <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
@@ -130,7 +158,8 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
                       <br></br>
                       <div style={{ background: "#F5F5F5", padding: "20px", borderRadius: "10px" }}>
                         <p>Name: {appointment.name}</p>
-                        <p>Phone Number: {appointment.phoneNumber}</p><br />
+                        <p>Phone Number: {appointment.phoneNumber}</p>
+                        <br />
                         <p>Date: {appointment.selectedDate}</p>
                         <p>Time: {appointment.selectedTime}</p>
                       </div>
