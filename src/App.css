@@ -1,3 +1,6 @@
+body {
+  color: #3d3c3c;
+}
 .App {
   text-align: center;
 }
@@ -35,4 +38,36 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+/* Styles for buttons */
+.btn {
+  padding: 10px 20px; /* Set padding for buttons */
+  font-size: 16px; /* Set font size for buttons */
+  border: none; /* Remove button borders */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+.btn:hover {
+  transform: scale(0.98);
+}
+/* Styles for primary button */
+.btn-primary {
+  background-color: #ff851b; /* Set background color for primary button */
+  color: #fff; /* Set text color for primary button */
+}
+.btn-primary:hover {
+  background-color: #fc9c48;
+  color: black;
+}
+/* Styles for danger button */
+.btn-danger {
+  background-color: white; /* Set background color for danger button */
+  color: #ff851b; /* Set text color for danger button */
+  border: solid;
+  border-color: #ff851b;
+}
+.btn-danger:hover {
+  background-color: #c0bebe;
+  color: black;
 }

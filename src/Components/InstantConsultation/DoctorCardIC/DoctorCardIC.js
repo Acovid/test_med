@@ -54,7 +54,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
   // define the style of the Book/Cancel appointment style
   const popupStyle = {
     width: "420px",
-    height: "700px",
+    height: "750px",
     position: "fixed",
     top: "50%",
     left: "50%",
@@ -101,7 +101,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
           onClose={() => setShowModal(false)}
         >
           {close => (
-            <div className="doctorbg" style={{ height: "100vh", overflow: "scroll" }}>
+            <div className="doctorbg" style={{ height: "100vh"}}>
               <div>
                 <div className="doctor-card-profile-image-container-small">
                   {/* <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">

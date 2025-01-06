@@ -98,19 +98,6 @@ button {
   /* margin-top: 15px; */
   margin: 10px;
 }
-.btn:hover {
-  transform: scale(0.98);
-}
-
-/* Styles for primary button in the signup form */
-.btn-primary {
-  background-color: #ff851b; /* Set background color for primary button */
-  color: #fff; /* Set text color for primary button */
-}
-.btn-primary:hover {
-  background-color: #fc9c48;
-  color: black;
-}
 
 /* Styles for danger button */
 .btn-danger {
