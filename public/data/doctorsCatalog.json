@@ -6,7 +6,7 @@
     "experience": 9,
     "speciality": "Dentist",
     "picture": "/images/doctors/yang.png",
-    "reviewGiven": ["Excellent service!"]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 2,
@@ -15,7 +15,7 @@
     "experience": 24,
     "speciality": "Dentist",
     "picture": "/images/doctors/raj.png",
-    "reviewGiven": ["Very professional."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 3,
@@ -24,7 +24,7 @@
     "experience": 11,
     "speciality": "Dentist",
     "picture": "/images/doctors/christie.png",
-    "reviewGiven": ["Not so nice."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 4,
@@ -33,7 +33,7 @@
     "experience": 18,
     "speciality": "Dentist",
     "picture": "/images/doctors/white.png",
-    "reviewGiven": ["Very friendly."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 5,
@@ -42,7 +42,7 @@
     "experience": 11,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/clark_elisabeth.png",
-    "reviewGiven": ["She knows her job."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 6,
@@ -51,7 +51,7 @@
     "experience": 40,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/turner_eugene.png",
-    "reviewGiven": ["Will come again."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 7,
@@ -60,7 +60,7 @@
     "experience": 33,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/dalkin.png",
-    "reviewGiven": ["I felt respected."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 8,
@@ -69,7 +69,7 @@
     "experience": 40,
     "speciality": "General Physician",
     "picture": "/images/doctors/pearson.png",
-    "reviewGiven": ["I didn't feel quite comfortable."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 9,
@@ -78,7 +78,7 @@
     "experience": 3,
     "speciality": "General Physician",
     "picture": "/images/doctors/okusa.png",
-    "reviewGiven": ["Scary."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 10,
@@ -87,7 +87,7 @@
     "experience": 9,
     "speciality": "Dentist",
     "picture": "/images/doctors/johnson.png",
-    "reviewGiven": ["Painless experience."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 16,
@@ -96,7 +96,7 @@
     "experience": 24,
     "speciality": "Dentist",
     "picture": "/images/doctors/anderson.png",
-    "reviewGiven": ["Pleasant office."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 11,
@@ -105,7 +105,7 @@
     "experience": 11,
     "speciality": "Dentist",
     "picture": "/images/doctors/miller.png",
-    "reviewGiven": ["Superb treatment!"]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 15,
@@ -114,7 +114,7 @@
     "experience": 18,
     "speciality": "Dentist",
     "picture": "/images/doctors/grosh.png",
-    "reviewGiven": ["Quite good."]
+    "reviewGiven": ""
   },
 
   {
@@ -124,7 +124,7 @@
     "experience": 11,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/clark_emily.png",
-    "reviewGiven": ["I trust her."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 13,
@@ -133,7 +133,7 @@
     "experience": 40,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/turner_samantha.png",
-    "reviewGiven": ["Extremely efficient."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 14,
@@ -142,7 +142,7 @@
     "experience": 33,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/parker.png",
-    "reviewGiven": ["Average experience."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 17,
@@ -151,7 +151,7 @@
     "experience": 40,
     "speciality": "General Physician",
     "picture": "/images/doctors/smith.png",
-    "reviewGiven": ["I recommend him to everyone with small children."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 18,
@@ -160,7 +160,7 @@
     "experience": 3,
     "speciality": "General Physician",
     "picture": "/images/doctors/taylor.png",
-    "reviewGiven": ["I didn't feel quite comfortable."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 19,
@@ -169,7 +169,7 @@
     "experience": 5,
     "speciality": "Dermatologist",
     "picture": "/images/doctors/taylor.png",
-    "reviewGiven": ["I felt respected."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 20,
@@ -178,7 +178,7 @@
     "experience": 35,
     "speciality": "Dermatologist",
     "picture": "/images/doctors/smith.png",
-    "reviewGiven": ["Very professional."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 21,
@@ -187,7 +187,7 @@
     "experience": 33,
     "speciality": "Dermatologist",
     "picture": "/images/doctors/parker.png",
-    "reviewGiven": ["She is OK."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 22,
@@ -196,7 +196,7 @@
     "experience": 9,
     "speciality": "Ear-nose-throat (ent) Specialist",
     "picture": "/images/doctors/yang.png",
-    "reviewGiven": ["I recommend him to everyone with small children."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 23,
@@ -205,7 +205,7 @@
     "experience": 24,
     "speciality": "Ear-nose-throat (ent) Specialist",
     "picture": "/images/doctors/raj.png",
-    "reviewGiven": ["Will come again."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 24,
@@ -214,7 +214,7 @@
     "experience": 11,
     "speciality": "Ear-nose-throat (ent) Specialist",
     "picture": "/images/doctors/christie.png",
-    "reviewGiven": ["Not so nice."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 25,
@@ -223,7 +223,7 @@
     "experience": 18,
     "speciality": "Ear-nose-throat (ent) Specialist",
     "picture": "/images/doctors/white.png",
-    "reviewGiven": ["Excellent service!"]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 26,
@@ -232,7 +232,7 @@
     "experience": 11,
     "speciality": "Ear-nose-throat (ent) Specialist",
     "picture": "/images/doctors/clark_elisabeth.png",
-    "reviewGiven": ["Very friendly."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 27,
@@ -241,7 +241,7 @@
     "experience": 40,
     "speciality": "Homeopath",
     "picture": "/images/doctors/turner_eugene.png",
-    "reviewGiven": ["He knows her job."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 28,
@@ -250,7 +250,7 @@
     "experience": 33,
     "speciality": "Homeopath",
     "picture": "/images/doctors/dalkin.png",
-    "reviewGiven": ["Will come again."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 29,
@@ -259,7 +259,7 @@
     "experience": 40,
     "speciality": "Homeopath",
     "picture": "/images/doctors/pearson.png",
-    "reviewGiven": ["I felt respected."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 30,
@@ -268,7 +268,7 @@
     "experience": 3,
     "speciality": "Homeopath",
     "picture": "/images/doctors/okusa.png",
-    "reviewGiven": ["Not so nice."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 31,
@@ -277,7 +277,7 @@
     "experience": 9,
     "speciality": "Homeopath",
     "picture": "/images/doctors/johnson.png",
-    "reviewGiven": ["Very friendly."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 32,
@@ -286,7 +286,7 @@
     "experience": 18,
     "speciality": "Ayurveda",
     "picture": "/images/doctors/white.png",
-    "reviewGiven": ["She knows her job."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 33,
@@ -295,7 +295,7 @@
     "experience": 11,
     "speciality": "Ayurveda",
     "picture": "/images/doctors/clark_elisabeth.png",
-    "reviewGiven": ["Very professional."]
+    "reviewGiven": ""
   },
   {
     "serialNumber": 34,
@@ -304,6 +304,6 @@
     "experience": 40,
     "speciality": "Ayurveda",
     "picture": "/images/doctors/turner_eugene.png",
-    "reviewGiven": ["Excellent service!"]
+    "reviewGiven": ""
   }
 ]

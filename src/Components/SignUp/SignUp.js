@@ -90,7 +90,7 @@ const SignUp = () => {
               <option value="doctor">Doctor</option>
               <option value="patient">Patient</option>
             </select>
-          </div> */}
+          </div> */} 
 
             <div className="form-group">
               <label htmlFor="email">Email</label>

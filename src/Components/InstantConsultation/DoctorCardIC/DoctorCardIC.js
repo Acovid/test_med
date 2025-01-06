@@ -7,18 +7,10 @@ import AppointmentFormIC from "../AppointmentFormIC/AppointmentFormIC"
 import { v4 as uuidv4 } from "uuid"
 import Notification from "../../Notification/Notification"
 
-// const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => {
 const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
   const [showModal, setShowModal] = useState(false)
   const [appointments, setAppointments] = useState([])
   const [doctorData, setDoctorData] = useState(null)
-
-  // const doctor = {
-  //   name,
-  //   speciality
-  // }
-
-  // setDoctorData(doctor)
 
   // Get doctor name from appointments in local storage
   let oldAppointment = ""
@@ -29,26 +21,20 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
   } catch (error) {
     console.log("There is no appointment in local storage.")
   }
-  // console.log("oldAppointment: ", oldAppointment);
-  // console.log("type of oldAppointment: ", typeof(oldAppointment));
-  // console.log("doctorWithAppointment: ", doctorWithAppointment);
 
-  const handleBooking = () => {
-    setShowModal(true)
-  }
+  // const handleBooking = () => {
+  //   setShowModal(true)
+  // }
 
-  const navigate = useNavigate()
+  // const navigate = useNavigate()
 
   const handleCancel = appointmentId => {
     const updatedAppointments = appointments.filter(appointment => appointment.id !== appointmentId)
     setAppointments(updatedAppointments)
     // remove appointment from teh local storage
     localStorage.removeItem("appointmentData")
-    // localStorage.removeItem("doctorData")
-    // window.localStorage.clear()
-    console.log("From DoctorCardIC.js:\nI removed the appointment data from local storage")
+    // console.log("From DoctorCardIC.js:\nI removed the appointment data from local storage")
     window.location.reload()
-    // setShowModal(false)
   }
 
   const handleCancelTwo = () => {
@@ -63,17 +49,11 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
     }
     const updatedAppointments = [...appointments, newAppointment]
     // Store appointment data under "storedDoctorData" in local storage
-    // localStorage.setItem("storedDoctorData", updatedAppointments)
     setAppointments(updatedAppointments)
     setShowModal(false)
   }
 
-  // this function returns true if there is already appointment with this doctor
-  // const doctorWithAppointment = () => {
-  //   console.log("this function returns true if there is already appointment with this doctor")
-  // }
-
-  // define the style of the Book/Cancel appointment style
+  // define the style for the popup content - the Book/Cancel appointment
   const popupStyle = {
     width: "420px",
     height: "750px",
@@ -86,7 +66,6 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
     border: "solid 1px #f5e0db",
     backgroundColor: "#fff"
   }
-  // console.log("doctorData: ", doctorData)
 
   return (
     <div className="doctor-card-container">
@@ -115,11 +94,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
           contentStyle={popupStyle}
           trigger={
             <button className={`book-appointment-btn ${doctorWithAppointment === name ? "cancel-appointment-btn" : ""}`}>
-              {console.log("Doctor with old appointment: ", doctorWithAppointment)}
-              {console.log("Current doctor: ", name)}
-              {/* {doctorWithAppointment()} */}
               {/* {appointments.length > 0 ? <div>Cancel Appointment</div> : <div>Book Appointment</div>} */}
-              {doctorWithAppointment === name ? console.log("Show Cancel app. button") : console.log("Show Book app. button")}
               {doctorWithAppointment === name ? <div onClick={() => handleCancelTwo()}>Cancel Appointment</div> : <div>Book Appointment</div>}
               <div>No Booking Fee</div>
             </button>
