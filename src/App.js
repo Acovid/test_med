@@ -6,37 +6,40 @@ import { BrowserRouter, Routes, Route } from "react-router-dom"
 import "./App.css"
 // import the context provider
 // import AppointmentContextProvider from "./context/AppointmentContextProvider"
+
 // Import my components
 import Navbar from "./Components/Navbar/Navbar"
 import LandingPage from "./Components/LandingPage/LandingPage"
 import SignUp from "./Components/SignUp/SignUp"
 import Login from "./Components/Login/Login"
 import InstantConsultation from "./Components/InstantConsultation/InstantConsultation"
-import BookingConsultation from "./Components/BookingConsultation/BookingConsultation"
+// import BookingConsultation from "./Components/BookingConsultation/BookingConsultation"
 import FakeLogin from "./Components/Login/FakeLogin"
-import FakeNotification from "./Components/Notification/FakeNotification"
+// import FakeNotification from "./Components/Notification/FakeNotification"
 import Notification from "./Components/Notification/Notification"
+import ReviewForm from "./Components/ReviewForm/ReviewForm"
 
 function App() {
   return (
     <div className="App">
       {/* Wrap all components into the context provider */}
       {/* <AppointmentContextProvider> */}
-        {/* Set up BrowserRouterC for routing */}
-        <BrowserRouter>
-          <Navbar />
-          <Notification />
-          {/* Set up the Routes for different pages */}
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/instant-consultation" element={<InstantConsultation />} />
-            <Route path="/booking-consultation" element={<BookingConsultation />} />
-            <Route path="/sign-up" element={<SignUp />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/fake-login" element={<FakeLogin />} />
-            <Route path="/notification" element={<Notification />} />
-          </Routes>
-        </BrowserRouter>
+      {/* Set up BrowserRouterC for routing */}
+      <BrowserRouter>
+        <Navbar />
+        <Notification />
+        {/* Set up the Routes for different pages */}
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/instant-consultation" element={<InstantConsultation />} />
+          {/* <Route path="/booking-consultation" element={<BookingConsultation />} /> */}
+          <Route path="/sign-up" element={<SignUp />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/fake-login" element={<FakeLogin />} />
+          <Route path="/notification" element={<Notification />} />
+          <Route path="/review" element={<ReviewForm />} />
+        </Routes>
+      </BrowserRouter>
       {/* </AppointmentContextProvider> */}
     </div>
   )

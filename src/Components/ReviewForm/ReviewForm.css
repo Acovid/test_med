@@ -1,0 +1,35 @@
+
+.reviewArea {
+  width: 1200px;
+  margin: auto;
+  margin-top: 150px;
+  padding: 30px;
+  border-radius: 10px;
+  border: solid 1px #f5e0db;
+  background-color: #fff;
+}
+
+/* Style for table */
+table, th, td {
+  /* border-collapse: "collapse"; */
+  width: "100%";
+  border: solid 1px gray;
+}
+th {
+  background-color: #f5e0db;
+  padding: 10px;
+}
+
+/* Styles for buttons */
+.btn {
+  padding: 10px 20px; /* Set padding for buttons */
+  font-size: 16px; /* Set font size for buttons */
+  border: none; /* Remove button borders */
+  border-radius: 4px; /* Add border radius for rounded corners */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+/* Styles for primary button in the signup form */
+.btn-primary {
+  background-color: #ff851b; /* Set background color for primary button */
+  color: #fff; /* Set text color for primary button */
+}

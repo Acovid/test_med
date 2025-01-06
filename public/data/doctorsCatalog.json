@@ -1,243 +1,309 @@
 [
   {
+    "serialNumber": 1,
     "name": "Dr. Jiao Yang",
     "ratings": "⭐⭐⭐⭐⭐",
     "experience": 9,
     "speciality": "Dentist",
-    "picture": "/images/doctors/yang.png"
+    "picture": "/images/doctors/yang.png",
+    "reviewGiven": ["Excellent service!"]
   },
   {
+    "serialNumber": 2,
     "name": "Dr. Denis Raj",
     "ratings": "⭐⭐⭐⭐",
     "experience": 24,
     "speciality": "Dentist",
-    "picture": "/images/doctors/raj.png"
+    "picture": "/images/doctors/raj.png",
+    "reviewGiven": ["Very professional."]
   },
   {
+    "serialNumber": 3,
     "name": "Dr. Lyn Christie",
     "ratings": "⭐⭐⭐",
     "experience": 11,
     "speciality": "Dentist",
-    "picture": "/images/doctors/christie.png"
+    "picture": "/images/doctors/christie.png",
+    "reviewGiven": ["Not so nice."]
   },
   {
+    "serialNumber": 4,
     "name": "Dr. Jessica White",
     "ratings": "⭐⭐⭐⭐",
     "experience": 18,
     "speciality": "Dentist",
-    "picture": "/images/doctors/white.png"
+    "picture": "/images/doctors/white.png",
+    "reviewGiven": ["Very friendly."]
   },
-
   {
+    "serialNumber": 5,
     "name": "Dr. Elizabeth Clark",
     "ratings": "⭐⭐⭐⭐",
     "experience": 11,
     "speciality": "Gynecologist/Obstetrician",
-    "picture": "/images/doctors/clark_elisabeth.png"
+    "picture": "/images/doctors/clark_elisabeth.png",
+    "reviewGiven": ["She knows her job."]
   },
   {
+    "serialNumber": 6,
     "name": "Dr. Eugene J. Turner",
     "ratings": "⭐⭐⭐⭐",
     "experience": 40,
     "speciality": "Gynecologist/Obstetrician",
-    "picture": "/images/doctors/turner_eugene.png"
+    "picture": "/images/doctors/turner_eugene.png",
+    "reviewGiven": ["Will come again."]
   },
   {
+    "serialNumber": 7,
     "name": "Dr. Alan Dalkin",
     "ratings": "⭐⭐⭐⭐",
     "experience": 33,
     "speciality": "Gynecologist/Obstetrician",
-    "picture": "/images/doctors/dalkin.png"
+    "picture": "/images/doctors/dalkin.png",
+    "reviewGiven": ["I felt respected."]
   },
   {
+    "serialNumber": 8,
     "name": "Dr. Richard Pearson",
     "ratings": "⭐⭐⭐",
     "experience": 40,
     "speciality": "General Physician",
-    "picture": "/images/doctors/pearson.png"
+    "picture": "/images/doctors/pearson.png",
+    "reviewGiven": ["I didn't feel quite comfortable."]
   },
   {
+    "serialNumber": 9,
     "name": "Dr. Mark D. Okusa",
     "ratings": "⭐⭐⭐",
     "experience": 3,
     "speciality": "General Physician",
-    "picture": "/images/doctors/okusa.png"
+    "picture": "/images/doctors/okusa.png",
+    "reviewGiven": ["Scary."]
   },
   {
+    "serialNumber": 10,
     "name": "Dr. Sarah Johnson",
     "ratings": "⭐⭐⭐⭐⭐",
     "experience": 9,
     "speciality": "Dentist",
-    "picture": "/images/doctors/johnson.png"
+    "picture": "/images/doctors/johnson.png",
+    "reviewGiven": ["Painless experience."]
   },
   {
+    "serialNumber": 16,
     "name": "Dr. David Anderson",
     "ratings": "⭐⭐⭐⭐",
     "experience": 24,
     "speciality": "Dentist",
-    "picture": "/images/doctors/anderson.png"
+    "picture": "/images/doctors/anderson.png",
+    "reviewGiven": ["Pleasant office."]
   },
   {
+    "serialNumber": 11,
     "name": "Dr. Kevin Miller",
     "ratings": "⭐⭐⭐⭐⭐",
     "experience": 11,
     "speciality": "Dentist",
-    "picture": "/images/doctors/miller.png"
+    "picture": "/images/doctors/miller.png",
+    "reviewGiven": ["Superb treatment!"]
   },
   {
+    "serialNumber": 15,
     "name": " Dr. Stephny Grosh",
     "ratings": "⭐⭐⭐⭐",
     "experience": 18,
     "speciality": "Dentist",
-    "picture": "/images/doctors/grosh.png"
+    "picture": "/images/doctors/grosh.png",
+    "reviewGiven": ["Quite good."]
   },
 
   {
+    "serialNumber": 12,
     "name": "Dr. Emily Clark",
     "ratings": "⭐⭐⭐⭐⭐",
     "experience": 11,
     "speciality": "Gynecologist/Obstetrician",
-    "picture": "/images/doctors/clark_emily.png"
+    "picture": "/images/doctors/clark_emily.png",
+    "reviewGiven": ["I trust her."]
   },
   {
+    "serialNumber": 13,
     "name": "Dr. Samantha Turner",
     "ratings": "⭐⭐⭐⭐",
     "experience": 40,
     "speciality": "Gynecologist/Obstetrician",
-    "picture": "/images/doctors/turner_samantha.png"
+    "picture": "/images/doctors/turner_samantha.png",
+    "reviewGiven": ["Extremely efficient."]
   },
   {
+    "serialNumber": 14,
     "name": "Dr. Rachel Parker",
     "ratings": "⭐⭐⭐",
     "experience": 33,
     "speciality": "Gynecologist/Obstetrician",
-    "picture": "/images/doctors/parker.png"
+    "picture": "/images/doctors/parker.png",
+    "reviewGiven": ["Average experience."]
   },
   {
+    "serialNumber": 17,
     "name": "Dr. Michael Smith",
     "ratings": "⭐⭐⭐⭐⭐",
     "experience": 40,
     "speciality": "General Physician",
-    "picture": "/images/doctors/smith.png"
+    "picture": "/images/doctors/smith.png",
+    "reviewGiven": ["I recommend him to everyone with small children."]
   },
   {
+    "serialNumber": 18,
     "name": "Dr. Laura Taylor",
     "ratings": "⭐⭐⭐",
     "experience": 3,
     "speciality": "General Physician",
-    "picture": "/images/doctors/taylor.png"
+    "picture": "/images/doctors/taylor.png",
+    "reviewGiven": ["I didn't feel quite comfortable."]
   },
   {
+    "serialNumber": 19,
     "name": "Dr. Mary Taylor",
     "ratings": "⭐⭐⭐⭐",
     "experience": 5,
     "speciality": "Dermatologist",
-    "picture": "/images/doctors/taylor.png"
+    "picture": "/images/doctors/taylor.png",
+    "reviewGiven": ["I felt respected."]
   },
   {
+    "serialNumber": 20,
     "name": "Dr. Steve Smith",
     "ratings": "⭐⭐⭐⭐⭐",
     "experience": 35,
     "speciality": "Dermatologist",
-    "picture": "/images/doctors/smith.png"
+    "picture": "/images/doctors/smith.png",
+    "reviewGiven": ["Very professional."]
   },
   {
+    "serialNumber": 21,
     "name": "Dr. Susan Parker",
     "ratings": "⭐⭐⭐",
     "experience": 33,
     "speciality": "Dermatologist",
-    "picture": "/images/doctors/parker.png"
+    "picture": "/images/doctors/parker.png",
+    "reviewGiven": ["She is OK."]
   },
   {
+    "serialNumber": 22,
     "name": "Dr. Lin Yang",
     "ratings": "⭐⭐⭐⭐⭐",
     "experience": 9,
     "speciality": "Ear-nose-throat (ent) Specialist",
-    "picture": "/images/doctors/yang.png"
+    "picture": "/images/doctors/yang.png",
+    "reviewGiven": ["I recommend him to everyone with small children."]
   },
   {
+    "serialNumber": 23,
     "name": "Dr. Morten Raj",
     "ratings": "⭐⭐⭐⭐",
     "experience": 24,
     "speciality": "Ear-nose-throat (ent) Specialist",
-    "picture": "/images/doctors/raj.png"
+    "picture": "/images/doctors/raj.png",
+    "reviewGiven": ["Will come again."]
   },
   {
+    "serialNumber": 24,
     "name": "Dr. Pamela Christie",
     "ratings": "⭐⭐⭐",
     "experience": 11,
     "speciality": "Ear-nose-throat (ent) Specialist",
-    "picture": "/images/doctors/christie.png"
+    "picture": "/images/doctors/christie.png",
+    "reviewGiven": ["Not so nice."]
   },
   {
+    "serialNumber": 25,
     "name": "Dr. Camila White",
     "ratings": "⭐⭐⭐⭐",
     "experience": 18,
     "speciality": "Ear-nose-throat (ent) Specialist",
-    "picture": "/images/doctors/white.png"
+    "picture": "/images/doctors/white.png",
+    "reviewGiven": ["Excellent service!"]
   },
-
   {
+    "serialNumber": 26,
     "name": "Dr. Kimberly Clark",
     "ratings": "⭐⭐⭐⭐",
     "experience": 11,
     "speciality": "Ear-nose-throat (ent) Specialist",
-    "picture": "/images/doctors/clark_elisabeth.png"
+    "picture": "/images/doctors/clark_elisabeth.png",
+    "reviewGiven": ["Very friendly."]
   },
   {
+    "serialNumber": 27,
     "name": "Dr. Emanuel Turner",
     "ratings": "⭐⭐⭐⭐",
     "experience": 40,
     "speciality": "Homeopath",
-    "picture": "/images/doctors/turner_eugene.png"
+    "picture": "/images/doctors/turner_eugene.png",
+    "reviewGiven": ["He knows her job."]
   },
   {
+    "serialNumber": 28,
     "name": "Dr. Ewan Dalkin",
     "ratings": "⭐⭐⭐⭐",
     "experience": 33,
     "speciality": "Homeopath",
-    "picture": "/images/doctors/dalkin.png"
+    "picture": "/images/doctors/dalkin.png",
+    "reviewGiven": ["Will come again."]
   },
   {
+    "serialNumber": 29,
     "name": "Dr. Anthony Pearson",
     "ratings": "⭐⭐⭐",
     "experience": 40,
     "speciality": "Homeopath",
-    "picture": "/images/doctors/pearson.png"
+    "picture": "/images/doctors/pearson.png",
+    "reviewGiven": ["I felt respected."]
   },
   {
+    "serialNumber": 30,
     "name": "Dr. Thorsten Okusa",
     "ratings": "⭐⭐⭐",
     "experience": 3,
     "speciality": "Homeopath",
-    "picture": "/images/doctors/okusa.png"
+    "picture": "/images/doctors/okusa.png",
+    "reviewGiven": ["Not so nice."]
   },
   {
+    "serialNumber": 31,
     "name": "Dr. Deborah Johnson",
     "ratings": "⭐⭐⭐⭐⭐",
     "experience": 9,
     "speciality": "Homeopath",
-    "picture": "/images/doctors/johnson.png"
+    "picture": "/images/doctors/johnson.png",
+    "reviewGiven": ["Very friendly."]
   },
   {
+    "serialNumber": 32,
     "name": "Dr. Melanie White",
     "ratings": "⭐⭐⭐⭐",
     "experience": 18,
     "speciality": "Ayurveda",
-    "picture": "/images/doctors/white.png"
+    "picture": "/images/doctors/white.png",
+    "reviewGiven": ["She knows her job."]
   },
   {
+    "serialNumber": 33,
     "name": "Dr. Marylin Clark",
     "ratings": "⭐⭐⭐⭐",
     "experience": 11,
     "speciality": "Ayurveda",
-    "picture": "/images/doctors/clark_elisabeth.png"
+    "picture": "/images/doctors/clark_elisabeth.png",
+    "reviewGiven": ["Very professional."]
   },
   {
+    "serialNumber": 34,
     "name": "Dr. Thomas Turner",
     "ratings": "⭐⭐⭐⭐",
     "experience": 40,
     "speciality": "Ayurveda",
-    "picture": "/images/doctors/turner_eugene.png"
+    "picture": "/images/doctors/turner_eugene.png",
+    "reviewGiven": ["Excellent service!"]
   }
 ]

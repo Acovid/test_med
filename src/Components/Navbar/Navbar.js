@@ -95,25 +95,15 @@ const Navbar = () => {
         <li className="link">
           <a href="/instant-consultation">Appointments</a>
         </li>
+        <li className="link">
+          <a href="/review">Review</a>
+        </li>
 
         {/* show either Sign Up or Welcome - depending f the user is logged in */}
         {signUpOrWelcome}
-        {/*  List item for the 'Sign Up' link with a button  */}
-        {/* <li className="link">
-          <a href="/sign-up">
-            <button className="btn1">Sign Up</button>
-          </a>
-        </li> */}
 
         {/* show either Login or Logout - depending f the user is logged in */}
         {loginOrLogout}
-        {/*  List item for the 'Login' link with a button  */}
-        {/* <li className="link">
-          <a href="/Login">
-            {/* <img className="login_icon" src={login} alt="Enter" /> */}
-        {/* <button className="btn1">Login</button>
-          </a>
-        </li> */}
       </ul>
     </nav>
   )
