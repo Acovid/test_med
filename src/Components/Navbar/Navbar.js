@@ -57,7 +57,7 @@ const Navbar = () => {
 
     function userIsLoggedout() {
       // do stuff if user is logged out
-      console.log("-- No name in the session storage.")
+      // console.log("-- No name in the session storage.")
       setSignUpOrWelcome(
         <li className="link">
           <a href="/sign-up">

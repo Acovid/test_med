@@ -2,43 +2,153 @@ import React, { useState, useEffect } from "react"
 import Popup from "reactjs-popup"
 import "../../App.css"
 import "./ReviewForm.css"
-// import doctorData from "/data/doctorsCatalog.json"
 
 const ReviewForm = () => {
   const [doctorsData, setDoctorsData] = useState([])
   const [popupOpen, setPopupOpen] = useState(false) // State to manage popup
   const [formValues, setFormValues] = useState({ name: "", review: "", rating: "" }) // Form values
+  const [submittedMessage, setSubmittedMessage] = useState("")
 
-  // BLOCK get doctors data
+  const doctorsCatalog = [
+    {
+      serialNumber: 1,
+      name: "Dr. Jiao Yang",
+      rating: 5,
+      experience: 9,
+      speciality: "Dentist",
+      picture: "/images/doctors/yang.png",
+      reviewGiven: ""
+    },
+    {
+      serialNumber: 2,
+      name: "Dr. Denis Raj",
+      rating: 4,
+      experience: 24,
+      speciality: "Dentist",
+      picture: "/images/doctors/raj.png",
+      reviewGiven: ""
+    },
+    {
+      serialNumber: 3,
+      name: "Dr. Lyn Christie",
+      ratings: 3,
+      experience: 11,
+      speciality: "Dentist",
+      picture: "/images/doctors/christie.png",
+      reviewGiven: ""
+    }
+  ]
+
+  // BLOCK: STORE DOCTORS' DATA TO BOTH THE LOCAL STORAGE AND TO STATE
+  // define function to fetch doctors data from the local file
   const getDoctorsDetails = () => {
-    // fetch doctors data from the catalog in local file
-    fetch("/data/doctorsCatalog.json")
+    fetch("/data/doctorsCatalog2.json")
       .then(res => res.json())
       .then(data => {
+        // return data
+        console.log("Data from the file: ", data, "Type:", typeof data)
+        console.log("Doctors' names: \n")
+        data.forEach(({ name }) => console.log(name))
         setDoctorsData(data)
+        if (!localStorage.getItem("doctorsData") || localStorage.getItem("doctorsData") === "[]") {
+          console.log('Local storage "doctorsData" does not exist yet, will set it up now.')
+          // console.log("State of doctorsData:", doctorsData)
+          localStorage.setItem("doctorsData", JSON.stringify(doctorsData))
+          // add doctors data into state
+          setDoctorsData(localStorage.getItem("doctorsData"))
+        }
       })
       .catch(err => console.log(err))
   }
+  // Run the above function to load data from file to state
   useEffect(() => {
-    // Load the data fetched from the file
-    getDoctorsDetails() // Assuming doctorData is imported
+    // first load doctors' data into local storage
+    // getDoctorsDetails()
+    setDoctorsData(doctorsCatalog)
+    // load data from local storage into state
+    // setDoctorsData(JSON.parse(localStorage.getItem("doctorsData")))
   }, [])
-  // END BLOCK get doctors data
+  // Copy doctors' data from state into local storage if not there yet
+  useEffect(() => {
+    if (!localStorage.getItem("doctorsData") || localStorage.getItem("doctorsData") === undefined || localStorage.getItem("doctorsData") === "[]") {
+      console.log('Local storage "doctorsData" does not exist yet, will set it up now.')
+      // console.log("State of doctorsData:", doctorsData)
+      localStorage.setItem("doctorsData", JSON.stringify(doctorsData))
+      // add doctors data into state
+      setDoctorsData(localStorage.getItem("doctorsData"))
+    }
+  }, [])
 
+  if (!localStorage.getItem("doctorsData") || localStorage.getItem("doctorsData") === undefined || localStorage.getItem("doctorsData") === "[]") {
+    console.log('Local storage "doctorsData" does not exist yet, will set it up now.')
+    // console.log("State of doctorsData:", doctorsData)
+    localStorage.setItem("doctorsData", JSON.stringify(doctorsCatalog))
+    // add doctors data into state
+    setDoctorsData(localStorage.getItem("doctorsData"))
+  }
+
+  //   console.log('Local storage "doctorsData" does not exist yet, will set it up now.')
+  console.log("State of doctorsData:", doctorsData)
+  // doctorsData.forEach(item => console.log("items in array: ", item))
+
+  //   localStorage.setItem("doctorsData", JSON.stringify(getDoctorsDetails()))
+  // } else {
+  //   console.log('Local storage "doctorsData" exists.')
+  // }
+  // END BLOCK: STORE DOCTORS' DATA TO BOTH THE LOCAL STORAGE AND TO STATE
+
+  // Function to handle form input changes
   const handleInputChange = e => {
-    const { name, value } = e.target
+    // const { name, value } = e.target
     setFormValues({ ...formValues, [e.target.name]: e.target.value })
   }
 
+  // Function to handle form submission
   const handleFormSubmit = e => {
+    console.log("Triggered handleFormSubmit function:\n")
     e.preventDefault()
+    // setSubmittedMessage(formValues)
+    // create new object with doctors data which includes the object updated in the form submission
+    const createNewDoctorsData = formValues => {
+      const newDoctorsData = [
+        {
+          serialNumber: 1,
+          name: "Aco",
+          rating: "⭐⭐⭐⭐⭐",
+          experience: 9,
+          speciality: "Dentist",
+          picture: "/images/doctors/yang.png",
+          reviewGiven: ""
+        },
+        {
+          serialNumber: 2,
+          name: "Sveta",
+          rating: "⭐⭐⭐⭐",
+          experience: 24,
+          speciality: "Dentist",
+          picture: "/images/doctors/raj.png",
+          reviewGiven: ""
+        }
+      ]
+      console.log("Type of newDoctorsData: ", typeof newDoctorsData)
+      return newDoctorsData
+    }
+    const newDoctorsData = createNewDoctorsData()
+    // update the state with doctors data
+    setDoctorsData(...doctorsData, newDoctorsData)
+    setFormValues({ ...formValues, [e.target.name]: e.target.value })
+
     console.log("Form Submitted:", formValues) // Replace this with your submit logic
     setPopupOpen(false) // Close the popup after submission
     setFormValues({ name: "", review: "", rating: "" }) // Reset the form
-    window.location.reload()
+    // setDoctorsData({ ...doctorsData, formValues })
+    console.log("After form submission:\n")
+    console.log("State doctorsData:\n", doctorsData)
+    console.log("State formValues:\n", formValues)
+    // window.location.reload()
   }
 
-  const handleCancel = () => {
+  const handleFormCancel = () => {
     setPopupOpen(false) // Close the popup
     setFormValues({ name: "", review: "" }) // Reset the form
     window.location.reload()
@@ -58,6 +168,11 @@ const ReviewForm = () => {
     backgroundColor: "#fff"
   }
 
+  // create an array that will hold teh state
+  const arrayOfDoctorsData = Object.values(doctorsData);
+  console.log("arrayOfDoctorsData:", arrayOfDoctorsData, "type:", typeof(arrayOfDoctorsData));
+
+  
   return (
     <div>
       {/* Page Title */}
@@ -74,7 +189,7 @@ const ReviewForm = () => {
           </tr>
         </thead>
         <tbody>
-          {doctorsData.map((data, index) => (
+          {arrayOfDoctorsData.map((data, index) => (
             <tr key={index}>
               <td>{data.serialNumber}</td>
               <td>{data.name}</td>
@@ -136,13 +251,14 @@ const ReviewForm = () => {
                           >
                             Submit
                           </button>
+
                           <button
                             type="button"
                             className="btn-danger"
                             style={{
                               marginLeft: "10px"
                             }}
-                            onClick={handleCancel}
+                            onClick={handleFormCancel}
                           >
                             Cancel
                           </button>

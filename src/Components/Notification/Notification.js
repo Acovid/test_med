@@ -18,7 +18,7 @@ const Notification = ({ children }) => {
       // Place for a function responsible for
       // pulling and displaying local storage data
       const appData = localStorage.getItem("appointmentData")
-      console.log("appData: ", appData)
+      // console.log("appData: ", appData)
     }
 
     window.addEventListener("storage", handleStorage())
