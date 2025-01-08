@@ -61,7 +61,7 @@ const Navbar = () => {
       setSignUpOrWelcome(
         <li className="link">
           <a href="/sign-up">
-            <button className="btn1">Sign Up</button>
+            <button className="btn1" >Sign Up</button>
           </a>
         </li>
       )
@@ -69,7 +69,9 @@ const Navbar = () => {
         <li className="link">
           <a href="/Login">
             {/* <img className="login_icon" src={login} alt="Enter" /> */}
-            <button className="btn1">Login</button>
+            <button className="btn1" style={{ margin: "0 80px 0 0" }}>
+              Login
+            </button>
           </a>
         </li>
       )
@@ -95,14 +97,14 @@ const Navbar = () => {
         <li className="link">
           <a href="/instant-consultation">Appointments</a>
         </li>
-        <li className="link">
+        <li className="link" style={{ marginRight: "50px" }}>
           <a href="/review">Review</a>
         </li>
 
-        {/* show either Sign Up or Welcome - depending f the user is logged in */}
+        {/* show either Sign Up or Welcome - depending if the user is logged in */}
         {signUpOrWelcome}
 
-        {/* show either Login or Logout - depending f the user is logged in */}
+        {/* show either Login or Logout - depending if the user is logged in */}
         {loginOrLogout}
       </ul>
     </nav>
