@@ -41,9 +41,9 @@ const LandingPage = () => {
               {" "}
               <button className="btn btn-danger">Fake Login</button>
             </a>
-            <a href="/doctor-table">
+            <a href="/test-navbar">
               {" "}
-              <button className="btn btn-danger">Doctor Table</button>
+              <button className="btn btn-danger">Test Navbar</button>
             </a>
           </div>
         </div>

@@ -14,11 +14,13 @@ import SignUp from "./Components/SignUp/SignUp"
 import Login from "./Components/Login/Login"
 import InstantConsultation from "./Components/InstantConsultation/InstantConsultation"
 // import BookingConsultation from "./Components/BookingConsultation/BookingConsultation"
-import FakeLogin from "./Components/Login/FakeLogin"
 // import FakeNotification from "./Components/Notification/FakeNotification"
 import Notification from "./Components/Notification/Notification"
 import ReviewForm from "./Components/ReviewForm/ReviewForm"
-import DoctorTable from "./Components/TestComponents/ReviewForm/DoctorTable"
+
+// test components
+import FakeLogin from "./Components/Login/FakeLogin"
+import NavbarWithProfileCard from "./Components/TestComponents/NavbarWithProfileCard"
 
 function App() {
   return (
@@ -39,7 +41,7 @@ function App() {
           <Route path="/fake-login" element={<FakeLogin />} />
           <Route path="/notification" element={<Notification />} />
           <Route path="/review" element={<ReviewForm />} />
-          <Route path="/doctor-table" element={<DoctorTable />} />
+          <Route path="/test-navbar" element={<NavbarWithProfileCard />} />
         </Routes>
       </BrowserRouter>
       {/* </AppointmentContextProvider> */}

@@ -96,7 +96,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
               {/* {appointments.length > 0 ? <div>Cancel Appointment</div> : <div>Book Appointment</div>} */}
               {/* {console.log("doctorNameInLocalStorage:", doctorNameInLocalStorage)}
               {console.log("name:", name)} */}
-              {doctorNameInLocalStorage === name ? <div onClick={() => handleCancel(3)}>Cancel Appointment</div> : <div>Book Appointment</div>}
+              {doctorNameInLocalStorage === name ? <div onClick={() => handleCancel(1)}>Cancel Appointment</div> : <div>Book Appointment</div>}
               <div>No Booking Fee</div>
             </button>
           }

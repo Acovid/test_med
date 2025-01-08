@@ -7,12 +7,12 @@ import login from "./login.svg"
 
 // Define a functional component
 const Navbar = () => {
-  const [name, setName] = useState("")
   // user's name
-  const [signUpOrWelcome, setSignUpOrWelcome] = useState("")
+  const [name, setName] = useState("")
   // flip: either display menu option Sign Up or Welcome user
-  const [loginOrLogout, setLoginOrLogout] = useState("")
+  const [signUpOrWelcome, setSignUpOrWelcome] = useState("")
   // flip: either display menu option Login or Logout
+  const [loginOrLogout, setLoginOrLogout] = useState("")
 
   const navigate = useNavigate() // Navigation hook from react-router
 
@@ -61,7 +61,7 @@ const Navbar = () => {
       setSignUpOrWelcome(
         <li className="link">
           <a href="/sign-up">
-            <button className="btn1" >Sign Up</button>
+            <button className="btn1">Sign Up</button>
           </a>
         </li>
       )
@@ -79,35 +79,37 @@ const Navbar = () => {
   }, [])
 
   return (
-    <nav>
-      <a href="/">
-        <img className="nav__logo" src={logo} alt="Stay Healthy logo" />
-      </a>
+    <>
+      <nav>
+        <a href="/">
+          <img className="nav__logo" src={logo} alt="Stay Healthy logo" />
+        </a>
 
-      <div className="nav__icon">
-        {/* Font Awesome icon for bars (hamburger menu) */}
-        <i className="fa fa-times fa fa-bars"></i>
-      </div>
+        <div className="nav__icon">
+          {/* Font Awesome icon for bars (hamburger menu) */}
+          <i className="fa fa-times fa fa-bars"></i>
+        </div>
 
-      {/*  Unordered list for navigation links with 'active' className  */}
-      <ul className="nav__links active">
-        <li className="link">
-          <a href="/">Home</a>
-        </li>
-        <li className="link">
-          <a href="/instant-consultation">Appointments</a>
-        </li>
-        <li className="link" style={{ marginRight: "50px" }}>
-          <a href="/review">Review</a>
-        </li>
+        {/*  Unordered list for navigation links with 'active' className  */}
+        <ul className="nav__links active">
+          <li className="link">
+            <a href="/">Home</a>
+          </li>
+          <li className="link">
+            <a href="/instant-consultation">Appointments</a>
+          </li>
+          <li className="link" style={{ marginRight: "50px" }}>
+            <a href="/review">Review</a>
+          </li>
 
-        {/* show either Sign Up or Welcome - depending if the user is logged in */}
-        {signUpOrWelcome}
+          {/* show either Sign Up or Welcome - depending if the user is logged in */}
+          {signUpOrWelcome}
 
-        {/* show either Login or Logout - depending if the user is logged in */}
-        {loginOrLogout}
-      </ul>
-    </nav>
+          {/* show either Login or Logout - depending if the user is logged in */}
+          {loginOrLogout}
+        </ul>
+      </nav>
+    </>
   )
 }
 
