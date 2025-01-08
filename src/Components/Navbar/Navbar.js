@@ -7,12 +7,24 @@ import login from "./login.svg"
 
 // Define a functional component
 const Navbar = () => {
-  // user's name
+  // user's name and mail
   const [name, setName] = useState("")
+  const [mail, setMail] = useState("")
   // flip: either display menu option Sign Up or Welcome user
   const [signUpOrWelcome, setSignUpOrWelcome] = useState("")
   // flip: either display menu option Login or Logout
   const [loginOrLogout, setLoginOrLogout] = useState("")
+  const [isProfileCardOpen, setIsProfileCardOpen] = useState(false) // Manage dropdown visibility
+  const [showProfileDetails, setShowProfileDetails] = useState(false) // Manage profile details visibility
+
+  const toggleProfileCard = () => {
+    setIsProfileCardOpen(prev => !prev)
+    setShowProfileDetails(false) // Reset profile details view
+  }
+
+  const showProfile = () => {
+    setShowProfileDetails(true)
+  }
 
   const navigate = useNavigate() // Navigation hook from react-router
 
@@ -27,6 +39,8 @@ const Navbar = () => {
       // console.log(`Session storage: \n email: ${email} \n userName: ${userName}`)
       // console.log("userName: ", userName)
       // in navbar display the welcome message and Logout button
+      setName(userName)
+      setMail(email)
       userIsLoggedin()
     } else {
       // in navbar display the Sign Up and Login button
@@ -35,7 +49,11 @@ const Navbar = () => {
 
     function userIsLoggedin() {
       // do stuff if user is logged in
-      setSignUpOrWelcome(<li className="welcome_user">Welcome {userName}</li>)
+      setSignUpOrWelcome(
+        <li className="welcome_user" onClick={toggleProfileCard}>
+          Welcome {userName}
+        </li>
+      )
       setLoginOrLogout(
         <li
           className="link"
@@ -57,7 +75,6 @@ const Navbar = () => {
 
     function userIsLoggedout() {
       // do stuff if user is logged out
-      // console.log("-- No name in the session storage.")
       setSignUpOrWelcome(
         <li className="link">
           <a href="/sign-up">
@@ -109,6 +126,70 @@ const Navbar = () => {
           {loginOrLogout}
         </ul>
       </nav>
+
+      {/* Dropdown Profile Card */}
+      {isProfileCardOpen && (
+        <div
+          // className="profile-card"
+          style={{
+            position: "absolute",
+            top: "80px", // Adjust as needed
+            right: "150px",
+            width: "250px",
+            padding: "15px",
+            backgroundColor: "white",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+            borderRadius: "5px",
+            zIndex: "1000"
+          }}
+        >
+          {!showProfileDetails ? (
+            // Show "Your Profile" link
+            <a
+              href="#"
+              onClick={showProfile}
+              style={{
+                textDecoration: "none",
+                color: "#ff851b",
+                fontWeight: "bold",
+                cursor: "pointer"
+              }}
+            >
+              Your Profile
+            </a>
+          ) : (
+            // Show Profile Details
+            <div style={{ textAlign: "left" }}>
+              <h3 style={{ margin: "0 0 10px 0", color: "#333" }}>User Profile</h3>
+              <p style={{ margin: "5px 0" }}>
+                <strong>Name:</strong> {name}
+              </p>
+              <p style={{ margin: "5px 0" }}>
+                <strong>Email:</strong> {mail}
+              </p>
+              {/* <p style={{ margin: "5px 0" }}>
+                <strong>Role:</strong> Administrator
+              </p> */}
+              <button
+                className="btn btn-primary"
+                onClick={() => setIsProfileCardOpen(false)}
+                style={{
+                  margin: "10px auto",
+                  padding: "8px 15px",
+                  // backgroundColor: "#007BFF",
+                  // color: "white",
+                  // border: "none",
+                  // borderRadius: "5px",
+                  // cursor: "pointer",
+                  width: "100%"
+                }}
+              >
+                Close
+              </button>
+            </div>
+          )}
+        </div>
+      )}
     </>
   )
 }
