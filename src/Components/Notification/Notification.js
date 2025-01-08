@@ -18,11 +18,11 @@ const Notification = ({ children }) => {
       // Place for a function responsible for
       // pulling and displaying local storage data
       const appData = localStorage.getItem("appointmentData")
-      console.log("appData: ", appData)
+      // console.log("appData: ", appData)
     }
 
-    window.addEventListener("storage", handleStorage())
-    return () => window.removeEventListener("storage", handleStorage())
+    // window.addEventListener("storage", handleStorage())
+    // return () => window.removeEventListener("storage", handleStorage())
   }, [])
 
   // useEffect hook to perform side effects in the component
@@ -46,13 +46,15 @@ const Notification = ({ children }) => {
     // Set appointmentData state if storedAppointmentData exists
     if (storedAppointmentData) {
       setAppointmentData(storedAppointmentData)
+      console.log("storedAppointmentData:", storedAppointmentData);
+      
     }
 
-    // add event listener for changes in local stoeage
-    window.addEventListener("storage", storedAppointmentData)
+    // add event listener for changes in local storage
+    // window.addEventListener("storage", storedAppointmentData)
 
     return () => {
-      window.removeEventListener("storage", storedAppointmentData)
+      // window.removeEventListener("storage", storedAppointmentData)
     }
   }, []) // Empty dependency array ensures useEffect runs only once after initial render
 
@@ -74,11 +76,11 @@ const Notification = ({ children }) => {
               <h3 className="appointment-card__title mb-4">Appointment Details</h3>
               <p className="appointment-card__message">
                 {/* Display doctor's name from doctorData */}
-                <strong>Doctor:</strong> {doctorData?.name}
+                <strong>Doctor:</strong> {appointmentData?.doctorName}
               </p>
               <p className="appointment-card__message">
                 {/* Display doctor's speciality from doctorData */}
-                <strong>Speciality:</strong> {doctorData?.speciality}
+                <strong>Speciality:</strong> {appointmentData?.doctorSpeciality}
               </p>
               <p className="appointment-card__message">
                 {/* Display user name */}

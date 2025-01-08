@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import "./FindDoctorSearchIC.css"
 import { useNavigate, Navigate } from "react-router-dom"
 
-const initSpeciality = ["Dentist", "Gynecologist/obstetrician", "General Physician", "Dermatologist", "Ear-nose-throat (ent) Specialist", "Homeopath", "Ayurveda"]
+const initSpeciality = ["Dentist", "Gynecologist/obstetrician", "General Physician", "Dermatologist", "Ear-nose-throat Specialist", "Homeopath", "Ayurveda"]
 
 const FindDoctorSearchIC = () => {
   const [doctorResultHidden, setDoctorResultHidden] = useState(true)

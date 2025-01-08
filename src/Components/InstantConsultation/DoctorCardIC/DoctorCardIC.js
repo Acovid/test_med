@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react"
 import Popup from "reactjs-popup"
 import "reactjs-popup/dist/index.css"
 import "./DoctorCardIC.css"
+import "../../../App.css"
 import AppointmentFormIC from "../AppointmentFormIC/AppointmentFormIC"
 import { v4 as uuidv4 } from "uuid"
 import Notification from "../../Notification/Notification"
@@ -18,24 +19,18 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
     speciality: speciality
   }
 
-  // Store doctor data to local storage
-  localStorage.setItem("doctorData", JSON.stringify(doctor))
-
   const handleBooking = () => {
     setShowModal(true)
   }
 
-  // const navigate = useNavigate()
-
   const handleCancel = appointmentId => {
     const updatedAppointments = appointments.filter(appointment => appointment.id !== appointmentId)
     setAppointments(updatedAppointments)
-    // remove appointment from teh local storage
+    // remove appointment from the local storage
     localStorage.removeItem("appointmentData")
     localStorage.removeItem("doctorData")
     console.log("From DoctorCardIC.js:\nI removed the appointment data from local storage")
-
-    // navigate("/notification")
+    window.location.reload()
     // setShowModal(false)
   }
 
@@ -48,6 +43,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
     // Store appointment data under "storedDoctorData" in local storage
     // localStorage.setItem("storedDoctorData", updatedAppointments)
     setAppointments(updatedAppointments)
+    window.location.reload()
     setShowModal(false)
   }
 
@@ -63,6 +59,11 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
     borderRadius: "10px",
     border: "solid 1px #f5e0db",
     backgroundColor: "#fff"
+  }
+
+  let doctorNameInLocalStorage = ""
+  if (localStorage.getItem("appointmentData")) {
+    doctorNameInLocalStorage = JSON.parse(localStorage.getItem("appointmentData")).doctorName
   }
 
   return (
@@ -91,8 +92,11 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
           style={{ backgroundColor: "#FFFFFF" }}
           contentStyle={popupStyle}
           trigger={
-            <button className={`book-appointment-btn ${appointments.length > 0 ? "cancel-appointment-btn" : ""}`}>
-              {appointments.length > 0 ? <div>Cancel Appointment</div> : <div>Book Appointment</div>}
+            <button className={`book-appointment-btn ${doctorNameInLocalStorage === name ? "cancel-appointment-btn" : ""}`}>
+              {/* {appointments.length > 0 ? <div>Cancel Appointment</div> : <div>Book Appointment</div>} */}
+              {/* {console.log("doctorNameInLocalStorage:", doctorNameInLocalStorage)}
+              {console.log("name:", name)} */}
+              {doctorNameInLocalStorage === name ? <div onClick={() => handleCancel(3)}>Cancel Appointment</div> : <div>Book Appointment</div>}
               <div>No Booking Fee</div>
             </button>
           }
@@ -130,7 +134,8 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
                       <br></br>
                       <div style={{ background: "#F5F5F5", padding: "20px", borderRadius: "10px" }}>
                         <p>Name: {appointment.name}</p>
-                        <p>Phone Number: {appointment.phoneNumber}</p><br />
+                        <p>Phone Number: {appointment.phoneNumber}</p>
+                        <br />
                         <p>Date: {appointment.selectedDate}</p>
                         <p>Time: {appointment.selectedTime}</p>
                       </div>
@@ -138,7 +143,9 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
                       <br></br>
                       <br></br>
                       <br></br>
-                      <button onClick={() => handleCancel(appointment.id)}>Cancel Appointment</button>
+                      <button className="btn-danger" onClick={() => handleCancel(appointment.id)}>
+                        Cancel Appointment
+                      </button>
                     </div>
                   ))}
                 </>

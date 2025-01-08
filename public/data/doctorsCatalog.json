@@ -194,7 +194,7 @@
     "name": "Dr. Lin Yang",
     "ratings": "⭐⭐⭐⭐⭐",
     "experience": 9,
-    "speciality": "Ear-nose-throat (ent) Specialist",
+    "speciality": "Ear-nose-throat Specialist",
     "picture": "/images/doctors/yang.png",
     "reviewGiven": ["I recommend him to everyone with small children."]
   },
@@ -203,7 +203,7 @@
     "name": "Dr. Morten Raj",
     "ratings": "⭐⭐⭐⭐",
     "experience": 24,
-    "speciality": "Ear-nose-throat (ent) Specialist",
+    "speciality": "Ear-nose-throat Specialist",
     "picture": "/images/doctors/raj.png",
     "reviewGiven": ["Will come again."]
   },
@@ -212,7 +212,7 @@
     "name": "Dr. Pamela Christie",
     "ratings": "⭐⭐⭐",
     "experience": 11,
-    "speciality": "Ear-nose-throat (ent) Specialist",
+    "speciality": "Ear-nose-throat Specialist",
     "picture": "/images/doctors/christie.png",
     "reviewGiven": ["Not so nice."]
   },
@@ -221,7 +221,7 @@
     "name": "Dr. Camila White",
     "ratings": "⭐⭐⭐⭐",
     "experience": 18,
-    "speciality": "Ear-nose-throat (ent) Specialist",
+    "speciality": "Ear-nose-throat Specialist",
     "picture": "/images/doctors/white.png",
     "reviewGiven": ["Excellent service!"]
   },
@@ -230,7 +230,7 @@
     "name": "Dr. Kimberly Clark",
     "ratings": "⭐⭐⭐⭐",
     "experience": 11,
-    "speciality": "Ear-nose-throat (ent) Specialist",
+    "speciality": "Ear-nose-throat Specialist",
     "picture": "/images/doctors/clark_elisabeth.png",
     "reviewGiven": ["Very friendly."]
   },
