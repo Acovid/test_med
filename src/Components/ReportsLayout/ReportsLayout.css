@@ -1,0 +1,87 @@
+/* .heading {
+  margin: 100px 0 0 270px;
+  text-align: left;
+} */
+
+.reviewArea {
+  width: 1200px;
+  margin: auto;
+  margin-top: 20px;
+  /* padding-top: 30px;
+  padding-left:50px; */
+  border-radius: 10px;
+  border: solid 1px #f5e0db;
+  /* border: solid 1px #ccc; */
+  background-color: #fff;
+}
+
+/* Style for table */
+table {
+  /* border-collapse: "collapse"; */
+  /* width: "1000px"; */
+  border: solid 1px #ccc;
+  /* padding: -1px; */
+}
+th {
+  background-color: #f5e0db;
+  padding: 10px;
+  /* width: 220px; */
+  margin: 0;
+}
+
+td {
+  padding: 10px;
+  border: solid 1px #f5e0db;
+}
+
+tr {
+  border: solid 1px gray;
+}
+
+/* Styles for the container element */
+.form-container {
+  max-width: 900px; /* Set maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 40px; /* Add padding inside the container */
+  margin-top: 10%; /* Set top margin as a percentage of the viewport height */
+  overflow: hidden; /* Hide any overflowing content */
+  background-color: white;
+
+  /* fix container to middle of teh screen */
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shadow {
+  box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 0.8);
+}
+
+.input-field-rule {
+  font-size: 12px;
+}
+
+/* Styles for the grid layout of the signup form */
+.feedback-grid {
+  display: grid; /* Use grid layout for the element */
+  grid-template-columns: 0.1fr 1.5fr 8fr; /* Define columns with fractional widths */
+  grid-gap: 10px; /* Set the gap between grid items */
+}
+
+.feedback-card {
+  /* width: 420px; */
+  margin: auto;
+  margin-top: 80px;
+  padding: 30px;
+  border-radius: 10px;
+  border: solid 1px #f5e0db;
+  background-color: #fff;
+}
+
+/* Styles for the main signup text */
+.feedback-text {
+  grid-column: 2 / 4; /* Span from second to fourth column */
+  text-align: left; /* Center-align text */
+}

@@ -18,6 +18,7 @@ import InstantConsultation from "./Components/InstantConsultation/InstantConsult
 import Notification from "./Components/Notification/Notification"
 import ReviewForm from "./Components/ReviewForm/ReviewForm"
 import ProfileForm from "./Components/ProfileCard/ProfileCard"
+import ReportsLayout from "./Components/ReportsLayout/ReportsLayout"
 
 // test components
 import FakeLogin from "./Components/Login/FakeLogin"
@@ -43,6 +44,7 @@ function App() {
           <Route path="/notification" element={<Notification />} />
           <Route path="/review" element={<ReviewForm />} />
           <Route path="/profile" element={<ProfileForm />} />
+          <Route path="/reports" element={<ReportsLayout />} />
           {/* <Route path="/test-navbar" element={<NavbarWithProfileCard />} /> */}
         </Routes>
       </BrowserRouter>

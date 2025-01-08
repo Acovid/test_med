@@ -5,6 +5,7 @@ import logo from "./stay-healthy-logo.png"
 // import logo from "/images/stay-healthy-logo.png"
 import login from "./login.svg"
 import ProfileCard from "../ProfileCard/ProfileCard"
+import ReportsLayout from "../ReportsLayout/ReportsLayout"
 
 // Define a functional component
 const Navbar = () => {
@@ -17,6 +18,7 @@ const Navbar = () => {
   const [loginOrLogout, setLoginOrLogout] = useState("")
   const [isProfileCardOpen, setIsProfileCardOpen] = useState(false) // Manage dropdown visibility
   const [showProfileComponent, setShowProfileComponent] = useState(false) // Manage ProfileCard component visibility
+  const [showReportsComponent, setShowReportsComponent] = useState(false) // Manage ProfileCard component visibility
 
   const toggleProfileCard = () => {
     setIsProfileCardOpen(prev => !prev)
@@ -25,6 +27,10 @@ const Navbar = () => {
 
   const openProfileComponent = () => {
     setShowProfileComponent(true) // Show ProfileCard component
+  }
+
+  const openReportsComponent = () => {
+    setShowReportsComponent(true) // Show ProfileCard component
   }
 
   const navigate = useNavigate() // Navigation hook from react-router
@@ -134,9 +140,9 @@ const Navbar = () => {
           style={{
             position: "absolute",
             top: "80px",
-            right: "150px",
-            width: "250px",
-            padding: "15px",
+            right: "185px",
+            width: "185px",
+            padding: "20px",
             backgroundColor: "white",
             boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
             borderRadius: "5px",
@@ -150,10 +156,23 @@ const Navbar = () => {
               textDecoration: "none",
               color: "#ff851b",
               fontWeight: "bold",
-              cursor: "pointer"
+              cursor: "pointer",
             }}
           >
             Your Profile
+          </a>
+            <br /><br />
+          <a
+            href="#"
+            onClick={openReportsComponent}
+            style={{
+              textDecoration: "none",
+              color: "#ff851b",
+              fontWeight: "bold",
+              cursor: "pointer"
+            }}
+          >
+            Reports
           </a>
         </div>
       )}
@@ -175,6 +194,26 @@ const Navbar = () => {
           }}
         >
           <ProfileCard />
+        </div>
+      )}
+
+      {/* Reports Component */}
+      {showReportsComponent && (
+        <div
+          style={{
+            position: "absolute",
+            backgroundColor: "white",
+            // border: "1px solid gray",
+            borderRadius: "5px",
+            padding: "20px",
+            top: "190px",
+            right: "100px",
+            zIndex: "1000",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+            color: "#3d3c3c"
+          }}
+        >
+          <ReportsLayout />
         </div>
       )}
     </>
