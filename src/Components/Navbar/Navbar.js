@@ -4,6 +4,7 @@ import "./Navbar.css"
 import logo from "./stay-healthy-logo.png"
 // import logo from "/images/stay-healthy-logo.png"
 import login from "./login.svg"
+import ProfileCard from "../ProfileCard/ProfileCard"
 
 // Define a functional component
 const Navbar = () => {
@@ -15,15 +16,15 @@ const Navbar = () => {
   // flip: either display menu option Login or Logout
   const [loginOrLogout, setLoginOrLogout] = useState("")
   const [isProfileCardOpen, setIsProfileCardOpen] = useState(false) // Manage dropdown visibility
-  const [showProfileDetails, setShowProfileDetails] = useState(false) // Manage profile details visibility
+  const [showProfileComponent, setShowProfileComponent] = useState(false) // Manage ProfileCard component visibility
 
   const toggleProfileCard = () => {
     setIsProfileCardOpen(prev => !prev)
-    setShowProfileDetails(false) // Reset profile details view
+    setShowProfileComponent(false) // Reset to hide ProfileCard component
   }
 
-  const showProfile = () => {
-    setShowProfileDetails(true)
+  const openProfileComponent = () => {
+    setShowProfileComponent(true) // Show ProfileCard component
   }
 
   const navigate = useNavigate() // Navigation hook from react-router
@@ -128,12 +129,11 @@ const Navbar = () => {
       </nav>
 
       {/* Dropdown Profile Card */}
-      {isProfileCardOpen && (
+      {isProfileCardOpen && !showProfileComponent && (
         <div
-          // className="profile-card"
           style={{
             position: "absolute",
-            top: "80px", // Adjust as needed
+            top: "80px",
             right: "150px",
             width: "250px",
             padding: "15px",
@@ -143,51 +143,38 @@ const Navbar = () => {
             zIndex: "1000"
           }}
         >
-          {!showProfileDetails ? (
-            // Show "Your Profile" link
-            <a
-              href="#"
-              onClick={showProfile}
-              style={{
-                textDecoration: "none",
-                color: "#ff851b",
-                fontWeight: "bold",
-                cursor: "pointer"
-              }}
-            >
-              Your Profile
-            </a>
-          ) : (
-            // Show Profile Details
-            <div style={{ textAlign: "left" }}>
-              <h3 style={{ margin: "0 0 10px 0", color: "#333" }}>User Profile</h3>
-              <p style={{ margin: "5px 0" }}>
-                <strong>Name:</strong> {name}
-              </p>
-              <p style={{ margin: "5px 0" }}>
-                <strong>Email:</strong> {mail}
-              </p>
-              {/* <p style={{ margin: "5px 0" }}>
-                <strong>Role:</strong> Administrator
-              </p> */}
-              <button
-                className="btn btn-primary"
-                onClick={() => setIsProfileCardOpen(false)}
-                style={{
-                  margin: "10px auto",
-                  padding: "8px 15px",
-                  // backgroundColor: "#007BFF",
-                  // color: "white",
-                  // border: "none",
-                  // borderRadius: "5px",
-                  // cursor: "pointer",
-                  width: "100%"
-                }}
-              >
-                Close
-              </button>
-            </div>
-          )}
+          <a
+            href="#"
+            onClick={openProfileComponent}
+            style={{
+              textDecoration: "none",
+              color: "#ff851b",
+              fontWeight: "bold",
+              cursor: "pointer"
+            }}
+          >
+            Your Profile
+          </a>
+        </div>
+      )}
+
+      {/* ProfileCard Component */}
+      {showProfileComponent && (
+        <div
+          style={{
+            position: "absolute",
+            backgroundColor: "white",
+            // border: "1px solid gray",
+            borderRadius: "5px",
+            padding: "20px",
+            top: "100px",
+            right: "100px",
+            zIndex: "1000",
+            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
+            color: "#3d3c3c"
+          }}
+        >
+          <ProfileCard />
         </div>
       )}
     </>

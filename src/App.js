@@ -17,10 +17,11 @@ import InstantConsultation from "./Components/InstantConsultation/InstantConsult
 // import FakeNotification from "./Components/Notification/FakeNotification"
 import Notification from "./Components/Notification/Notification"
 import ReviewForm from "./Components/ReviewForm/ReviewForm"
+import ProfileForm from "./Components/ProfileCard/ProfileCard"
 
 // test components
 import FakeLogin from "./Components/Login/FakeLogin"
-import NavbarWithProfileCard from "./Components/TestComponents/NavbarWithProfileCard"
+// import NavbarWithProfileCard from "./Components/TestComponents/NavbarWithProfileCard"
 
 function App() {
   return (
@@ -41,7 +42,8 @@ function App() {
           <Route path="/fake-login" element={<FakeLogin />} />
           <Route path="/notification" element={<Notification />} />
           <Route path="/review" element={<ReviewForm />} />
-          <Route path="/test-navbar" element={<NavbarWithProfileCard />} />
+          <Route path="/profile" element={<ProfileForm />} />
+          {/* <Route path="/test-navbar" element={<NavbarWithProfileCard />} /> */}
         </Routes>
       </BrowserRouter>
       {/* </AppointmentContextProvider> */}

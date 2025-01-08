@@ -1,7 +1,7 @@
 // Following code has been commented with appropriate comments for your reference.
 // Import necessary modules from React and other files
 import React, { useEffect, useState } from "react"
-import { API_URL } from "../../config"
+import { API_URL } from "../../../config"
 import { useNavigate } from "react-router-dom"
 
 // Define a Function component called ProfileForm
@@ -116,26 +116,30 @@ const ProfileForm = () => {
     <div className="profile-container">
       {editMode ? (
         <form onSubmit={handleSubmit}>
-          <label style={{ textAlign: "left" }}>
+          <label>
             Name
-            <input type="text" name="name" value={updatedDetails.name} onChange={handleInputChange} style={{ marginBottom: "10px" }} />
+            <input type="text" name="name" value={updatedDetails.name} onChange={handleInputChange} />
           </label>
 
-          <label style={{ textAlign: "left" }}>
+          <label>
             Email
             <input
               type="email"
               name="email"
               value={userDetails.email}
               disabled // Disable the email field
-              style={{ marginBottom: "10px" }}
             />
           </label>
 
-          <label style={{ textAlign: "left" }}>
-            Phone
-            <input type="text" name="phone" value={updatedDetails.phone} onChange={handleInputChange} style={{ marginBottom: "10px" }} />
-          </label>
+          <label>
+         Phone
+         <input
+           type="text"
+           name="phone"
+           value={updatedDetails.phone}
+           onChange={handleInputChange}
+         />
+       </label>
           {/* Create similar logic for displaying and editing name and phone from userDetails */}
           <button type="submit">Save</button>
         </form>
