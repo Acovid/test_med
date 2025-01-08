@@ -1,15 +1,15 @@
 [
   {
     "serialNumber": 1,
-    "doctorName": "Dr. John Doe",
-    "doctorSpeciality": "Cardiology",
+    "name": "Dr. John Doe",
+    "speciality": "Cardiology",
     "review": null,
     "buttonDisabled": false
   },
   {
     "serialNumber": 2,
-    "doctorName": "Dr. Jane Smith",
-    "doctorSpeciality": "Neurology",
+    "name": "Dr. Jane Smith",
+    "speciality": "Neurology",
     "review": null,
     "buttonDisabled": false
   }

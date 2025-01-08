@@ -38,12 +38,24 @@ tr {
 }
 
 /* Styles for the container element */
-.container {
+.form-container {
   max-width: 900px; /* Set maximum width for the container */
   margin: 0 auto; /* Center the container horizontally */
   padding: 40px; /* Add padding inside the container */
   margin-top: 10%; /* Set top margin as a percentage of the viewport height */
   overflow: hidden; /* Hide any overflowing content */
+  background-color: white;
+
+  /* fix container to middle of teh screen */
+  width: 50%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.shadow {
+  box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 0.8);
 }
 
 .input-field-rule {

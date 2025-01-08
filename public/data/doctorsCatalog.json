@@ -6,7 +6,8 @@
     "experience": 9,
     "speciality": "Dentist",
     "picture": "/images/doctors/yang.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 2,
@@ -15,7 +16,8 @@
     "experience": 24,
     "speciality": "Dentist",
     "picture": "/images/doctors/raj.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 3,
@@ -24,7 +26,8 @@
     "experience": 11,
     "speciality": "Dentist",
     "picture": "/images/doctors/christie.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 4,
@@ -33,7 +36,8 @@
     "experience": 18,
     "speciality": "Dentist",
     "picture": "/images/doctors/white.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 5,
@@ -42,7 +46,8 @@
     "experience": 11,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/clark_elisabeth.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 6,
@@ -51,7 +56,8 @@
     "experience": 40,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/turner_eugene.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 7,
@@ -60,7 +66,8 @@
     "experience": 33,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/dalkin.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 8,
@@ -69,7 +76,8 @@
     "experience": 40,
     "speciality": "General Physician",
     "picture": "/images/doctors/pearson.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 9,
@@ -78,7 +86,8 @@
     "experience": 3,
     "speciality": "General Physician",
     "picture": "/images/doctors/okusa.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 10,
@@ -87,7 +96,8 @@
     "experience": 9,
     "speciality": "Dentist",
     "picture": "/images/doctors/johnson.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 16,
@@ -96,7 +106,8 @@
     "experience": 24,
     "speciality": "Dentist",
     "picture": "/images/doctors/anderson.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 11,
@@ -105,7 +116,8 @@
     "experience": 11,
     "speciality": "Dentist",
     "picture": "/images/doctors/miller.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 15,
@@ -114,7 +126,8 @@
     "experience": 18,
     "speciality": "Dentist",
     "picture": "/images/doctors/grosh.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
 
   {
@@ -124,7 +137,8 @@
     "experience": 11,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/clark_emily.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 13,
@@ -133,7 +147,8 @@
     "experience": 40,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/turner_samantha.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 14,
@@ -142,7 +157,8 @@
     "experience": 33,
     "speciality": "Gynecologist/Obstetrician",
     "picture": "/images/doctors/parker.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 17,
@@ -151,7 +167,8 @@
     "experience": 40,
     "speciality": "General Physician",
     "picture": "/images/doctors/smith.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 18,
@@ -160,7 +177,8 @@
     "experience": 3,
     "speciality": "General Physician",
     "picture": "/images/doctors/taylor.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 19,
@@ -169,7 +187,8 @@
     "experience": 5,
     "speciality": "Dermatologist",
     "picture": "/images/doctors/taylor.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 20,
@@ -178,7 +197,8 @@
     "experience": 35,
     "speciality": "Dermatologist",
     "picture": "/images/doctors/smith.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 21,
@@ -187,7 +207,8 @@
     "experience": 33,
     "speciality": "Dermatologist",
     "picture": "/images/doctors/parker.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 22,
@@ -196,7 +217,8 @@
     "experience": 9,
     "speciality": "Ear-nose-throat Specialist",
     "picture": "/images/doctors/yang.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 23,
@@ -205,7 +227,8 @@
     "experience": 24,
     "speciality": "Ear-nose-throat Specialist",
     "picture": "/images/doctors/raj.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 24,
@@ -214,7 +237,8 @@
     "experience": 11,
     "speciality": "Ear-nose-throat Specialist",
     "picture": "/images/doctors/christie.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 25,
@@ -223,7 +247,8 @@
     "experience": 18,
     "speciality": "Ear-nose-throat Specialist",
     "picture": "/images/doctors/white.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 26,
@@ -232,7 +257,8 @@
     "experience": 11,
     "speciality": "Ear-nose-throat Specialist",
     "picture": "/images/doctors/clark_elisabeth.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 27,
@@ -241,7 +267,8 @@
     "experience": 40,
     "speciality": "Homeopath",
     "picture": "/images/doctors/turner_eugene.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 28,
@@ -250,7 +277,8 @@
     "experience": 33,
     "speciality": "Homeopath",
     "picture": "/images/doctors/dalkin.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 29,
@@ -259,7 +287,8 @@
     "experience": 40,
     "speciality": "Homeopath",
     "picture": "/images/doctors/pearson.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 30,
@@ -268,7 +297,8 @@
     "experience": 3,
     "speciality": "Homeopath",
     "picture": "/images/doctors/okusa.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 31,
@@ -277,7 +307,8 @@
     "experience": 9,
     "speciality": "Homeopath",
     "picture": "/images/doctors/johnson.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 32,
@@ -286,7 +317,8 @@
     "experience": 18,
     "speciality": "Ayurveda",
     "picture": "/images/doctors/white.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 33,
@@ -295,7 +327,8 @@
     "experience": 11,
     "speciality": "Ayurveda",
     "picture": "/images/doctors/clark_elisabeth.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   },
   {
     "serialNumber": 34,
@@ -304,6 +337,7 @@
     "experience": 40,
     "speciality": "Ayurveda",
     "picture": "/images/doctors/turner_eugene.png",
-    "reviewGiven": ""
+    "review": null,
+    "buttonDisabled": false
   }
 ]

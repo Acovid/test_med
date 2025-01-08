@@ -14,8 +14,31 @@ const ReviewForm = () => {
     doctorRating: ""
   }) // Form input values
 
+  const getDoctorsDetails = () => {
+    // define a function that fetches doctors' data either from the local storage or from the file
+    fetch("/data/doctorsCatalog.json")
+      .then(res => res.json())
+      .then(data => {
+        if (localStorage.getItem("reviews")) {
+          const reviews = JSON.parse(localStorage.getItem("reviews"))
+          setData(reviews)
+        } else {
+          setData(data)
+        }
+        setData(data)
+      })
+      .catch(err => console.log(err))
+  }
+  // load the data
   useEffect(() => {
-    setData(doctorData) // Load data from JSON file
+    // setData(doctorData) // Load data from JSON file
+    // if (localStorage.getItem("reviews")) {
+    //   const reviews = JSON.parse(localStorage.getItem("reviews"))
+    //   setData(reviews)
+    // } else {
+    //   setData(doctorData)
+    // }
+    getDoctorsDetails()
   }, [])
 
   const handleInputChange = e => {
@@ -35,6 +58,8 @@ const ReviewForm = () => {
         : doctor
     )
     setData(updatedData)
+    //  persist state into local storage
+    localStorage.setItem("reviews", JSON.stringify(data))
     setSelectedDoctor(null) // Close the form
     setFormValues({ username: "", reviewContent: "", doctorRating: "" }) // Reset form
   }
@@ -45,7 +70,7 @@ const ReviewForm = () => {
 
   return (
     <div>
-      <h1 className="heading">Reviews</h1>
+      <h1 className="heading" style={{alignText:"left", marginLeft:"170px"}}>Reviews</h1>
       <div className="reviewArea">
         <table>
           <thead>
@@ -58,24 +83,11 @@ const ReviewForm = () => {
             </tr>
           </thead>
           <tbody>
-            {/* {doctorsData.map((data, index) => (
-              <tr key={index}>
-                <td>{data.serialNumber}</td>
-                <td>{data.name}</td>
-                <td>{data.speciality}</td>
-                <td>
-                  <button className="btn btp-primary" onClick={() => alert(`Feedback for ${data.name} clicked!`)}>
-                    Click here
-                  </button>
-                </td>
-                <td style={{ width: "300px" }}>{data.reviewGiven}</td>
-              </tr>
-            ))} */}
             {data.map(doctor => (
               <tr key={doctor.serialNumber}>
                 <td>{doctor.serialNumber}</td>
-                <td>{doctor.doctorName}</td>
-                <td>{doctor.doctorSpeciality}</td>
+                <td>{doctor.name}</td>
+                <td>{doctor.speciality}</td>
                 <td>
                   <button
                     className="btn btn-primary"
@@ -98,7 +110,7 @@ const ReviewForm = () => {
         {/* Feedback Form */}
         {selectedDoctor && (
           <div
-            className="container"
+            className="form-container shadow"
             style={{
               marginTop: "20px",
               padding: "20px",
@@ -109,7 +121,7 @@ const ReviewForm = () => {
           >
             {/* <div className="feedback-grid feedback-card"> */}
             <div>
-              <h3 style={{ marginBottom: "20px" }}>Provide Feedback</h3>
+              <h3 style={{ marginBottom: "20px" }}>Give Your Review</h3>
               <form onSubmit={handleFormSubmit}>
                 {/* Input: Username */}
                 <div style={{ marginBottom: "10px", textAlign: "left" }}>
