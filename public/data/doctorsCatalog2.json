@@ -1,0 +1,29 @@
+[
+  {
+    "serialNumber": 1,
+    "name": "Dr. Jiao Yang",
+    "rating": 5,
+    "experience": 9,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/yang.png",
+    "reviewGiven": ""
+  },
+  {
+    "serialNumber": 2,
+    "name": "Dr. Denis Raj",
+    "rating": 4,
+    "experience": 24,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/raj.png",
+    "reviewGiven": ""
+  },
+  {
+    "serialNumber": 3,
+    "name": "Dr. Lyn Christie",
+    "ratings": 3,
+    "experience": 11,
+    "speciality": "Dentist",
+    "picture": "/images/doctors/christie.png",
+    "reviewGiven": ""
+  }
+]

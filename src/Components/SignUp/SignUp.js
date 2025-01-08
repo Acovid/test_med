@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+import "../../App.css"
 import "./SignUp.css"
 import { Link, useNavigate } from "react-router-dom"
 import { API_URL } from "../../config"
@@ -89,7 +90,7 @@ const SignUp = () => {
               <option value="doctor">Doctor</option>
               <option value="patient">Patient</option>
             </select>
-          </div> */}
+          </div> */} 
 
             <div className="form-group">
               <label htmlFor="email">Email</label>

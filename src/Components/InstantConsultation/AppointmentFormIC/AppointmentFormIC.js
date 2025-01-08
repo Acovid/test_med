@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+// import { useNavigate } from "react-router-dom"
 
 const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
   const [name, setName] = useState("")
@@ -6,9 +7,7 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
   const [selectedDate, setSelectedDate] = useState("")
   const [selectedTime, setSelectedTime] = useState("")
 
-  // const handleTimeSelection = (slot) => {
-  //   setSelectedTime(slot);
-  // };
+  // const navigate = useNavigate()
 
   const handleFormSubmit = e => {
     e.preventDefault()
@@ -25,9 +24,10 @@ const AppointmentFormIC = ({ doctorName, doctorSpeciality, onSubmit }) => {
       date: selectedDate,
       time: selectedTime
     }
-    console.log(`FROM AppointmentFormIC.js - I booked this appointment:\ndoctorName: ${doctorName}\ndoctorSpeciality: ${doctorSpeciality}\nname: ${name}\nphone: ${phoneNumber}\ndate: ${selectedDate}\ntime: ${selectedTime}\n`)
+    console.log(`FROM AppointmentFormIC.js - I booked this appointment:\nname: ${name}\nphone: ${phoneNumber}\ndate: ${selectedDate}\ntime: ${selectedTime}\n`)
     // Store appointment data to local storage
     localStorage.setItem("appointmentData", JSON.stringify(appointment))
+    window.location.reload()
   }
 
   return (

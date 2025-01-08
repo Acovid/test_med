@@ -93,7 +93,6 @@ body {
   margin-bottom: 20px; /* Add bottom margin to form groups */
   text-align: left;
 }
-
 .form-group label {
   display: block; /* Display labels as blocks */
   margin-bottom: 5px; /* Add bottom margin to labels */
@@ -113,35 +112,4 @@ body {
 .btn-group {
   margin-top: 0.0001px; /* Add a small top margin to button group */
   margin-bottom: 20px; /* Add bottom margin to button group */
-}
-
-/* Styles for buttons in the signup form */
-.btn {
-  padding: 10px 20px; /* Set padding for buttons */
-  font-size: 16px; /* Set font size for buttons */
-  border: none; /* Remove button borders */
-  border-radius: 4px; /* Add border radius for rounded corners */
-  cursor: pointer; /* Change cursor to pointer on hover */
-}
-
-/* Styles for primary button in the signup form */
-.btn-primary {
-  background-color: #ff851b; /* Set background color for primary button */
-  color: #fff; /* Set text color for primary button */
-}
-.btn-primary:hover {
-  background-color: #fc9c48;
-  color: black;
-}
-
-/* Styles for danger button in the signup form */
-.btn-danger {
-  background-color: white; /* Set background color for danger button */
-  color: #ff851b; /* Set text color for danger button */
-  border: solid;
-  border-color: #ff851b;
-}
-.btn-danger:hover {
-  background-color: #c0bebe;
-  color: black;
 }
