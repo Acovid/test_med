@@ -205,7 +205,7 @@ const Navbar = () => {
             backgroundColor: "white",
             // border: "1px solid gray",
             borderRadius: "5px",
-            padding: "20px",
+            padding: "20px 60px",
             top: "190px",
             right: "100px",
             zIndex: "1000",

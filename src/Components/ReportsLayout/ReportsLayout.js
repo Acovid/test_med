@@ -70,7 +70,7 @@ const ReportsLayout = () => {
 
   return (
     <div>
-      <h1 style={{textAlign:"left",  }}>Reports</h1>
+      <h1 style={{ textAlign: "left" }}>Reports</h1>
       <div className="reviewArea">
         <table>
           <thead>
@@ -78,8 +78,8 @@ const ReportsLayout = () => {
               <th style={{ width: "140px" }}>Serial Number</th>
               <th style={{ width: "200px" }}>Doctor Name</th>
               <th style={{ width: "250px" }}>Doctor Speciality</th>
-              <th>Provide Feedback</th>
-              <th style={{ width: "300px" }}>Review</th>
+              <th>View Report</th>
+              <th style={{ width: "200px" }}>Download Report</th>
             </tr>
           </thead>
           <tbody>
@@ -93,15 +93,29 @@ const ReportsLayout = () => {
                     className="btn btn-primary"
                     style={{
                       backgroundColor: doctor.buttonDisabled ? "gray" : "#ff851b",
-                      cursor: doctor.buttonDisabled ? "not-allowed" : "pointer"
+                      cursor: doctor.buttonDisabled ? "not-allowed" : "pointer",
+                      width: "200px"
                     }}
                     disabled={doctor.buttonDisabled}
                     onClick={() => setSelectedDoctor(doctor.serialNumber)}
                   >
-                    {doctor.buttonDisabled ? "Feedback Submitted" : "Click here"}
+                    {doctor.buttonDisabled ? "Feedback Submitted" : "View Report"}
                   </button>
                 </td>
-                <td>{doctor.review || "No review yet"}</td>
+                <td>
+                  <button
+                    className="btn btn-primary"
+                    style={{
+                      backgroundColor: doctor.buttonDisabled ? "gray" : "#ff851b",
+                      cursor: doctor.buttonDisabled ? "not-allowed" : "pointer",
+                      width: "200px"
+                    }}
+                    disabled={doctor.buttonDisabled}
+                    onClick={() => setSelectedDoctor(doctor.serialNumber)}
+                  >
+                    {doctor.buttonDisabled ? "Feedback Submitted" : "Download Report"}
+                  </button>
+                </td>
               </tr>
             ))}
           </tbody>
