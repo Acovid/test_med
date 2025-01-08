@@ -70,10 +70,10 @@ const InstantConsultation = () => {
           <div className="search-results-container">
             {isSearched ? (
               <center>
-                <h2>
+                <h2 style={{marginTop: "60px"}}>
                   {filteredDoctors.length} doctors are available {searchParams.get("location")}
                 </h2>
-                <h3>Book appointments with minimum wait-time & verified doctor details</h3>
+                <h3 >Book appointments with minimum wait-time & verified doctor details</h3>
                 {filteredDoctors.length > 0 ? filteredDoctors.map(doctor => <DoctorCardIC className="doctorcard" {...doctor} key={doctor.name} />) : <p>No doctors found.</p>}
               </center>
             ) : (

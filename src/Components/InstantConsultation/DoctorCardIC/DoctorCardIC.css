@@ -133,12 +133,9 @@
   transition: background-color 0.3s ease;
 }
 .doctorbg {
-  /* height: 200px;
-  width: 500px; */
-/* 
   -webkit-scrollbar {
     display: none;
-  } */
+  }
 }
 .modal-btn:hover {
   background-color: #0d8af5;

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react"
-import { useNavigate } from "react-router-dom"
+// import { useNavigate } from "react-router-dom"
 import Popup from "reactjs-popup"
 import "reactjs-popup/dist/index.css"
 import "./DoctorCardIC.css"
@@ -8,6 +8,7 @@ import AppointmentFormIC from "../AppointmentFormIC/AppointmentFormIC"
 import { v4 as uuidv4 } from "uuid"
 import Notification from "../../Notification/Notification"
 
+// const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => {
 const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
   const [showModal, setShowModal] = useState(false)
   const [appointments, setAppointments] = useState([])
