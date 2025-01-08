@@ -18,6 +18,7 @@ import FakeLogin from "./Components/Login/FakeLogin"
 // import FakeNotification from "./Components/Notification/FakeNotification"
 import Notification from "./Components/Notification/Notification"
 import ReviewForm from "./Components/ReviewForm/ReviewForm"
+import DoctorTable from "./Components/TestComponents/ReviewForm/DoctorTable"
 
 function App() {
   return (
@@ -38,6 +39,7 @@ function App() {
           <Route path="/fake-login" element={<FakeLogin />} />
           <Route path="/notification" element={<Notification />} />
           <Route path="/review" element={<ReviewForm />} />
+          <Route path="/doctor-table" element={<DoctorTable />} />
         </Routes>
       </BrowserRouter>
       {/* </AppointmentContextProvider> */}

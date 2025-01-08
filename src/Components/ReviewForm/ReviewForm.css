@@ -10,6 +10,7 @@
   padding: 30px;
   border-radius: 10px;
   border: solid 1px #f5e0db;
+  /* border: solid 1px #ccc; */
   background-color: #fff;
 }
 
@@ -17,7 +18,7 @@
 table {
   /* border-collapse: "collapse"; */
   /* width: "1000px"; */
-  border: solid 1px #f5e0db;
+  border: solid 1px #ccc;
   /* padding: -1px; */
 }
 th {
@@ -34,4 +35,40 @@ td {
 
 tr {
   border: solid 1px gray;
+}
+
+/* Styles for the container element */
+.container {
+  max-width: 900px; /* Set maximum width for the container */
+  margin: 0 auto; /* Center the container horizontally */
+  padding: 40px; /* Add padding inside the container */
+  margin-top: 10%; /* Set top margin as a percentage of the viewport height */
+  overflow: hidden; /* Hide any overflowing content */
+}
+
+.input-field-rule {
+  font-size: 12px;
+}
+
+/* Styles for the grid layout of the signup form */
+.feedback-grid {
+  display: grid; /* Use grid layout for the element */
+  grid-template-columns: 0.1fr 1.5fr 8fr; /* Define columns with fractional widths */
+  grid-gap: 10px; /* Set the gap between grid items */
+}
+
+.feedback-card {
+  /* width: 420px; */
+  margin: auto;
+  margin-top: 80px;
+  padding: 30px;
+  border-radius: 10px;
+  border: solid 1px #f5e0db;
+  background-color: #fff;
+}
+
+/* Styles for the main signup text */
+.feedback-text {
+  grid-column: 2 / 4; /* Span from second to fourth column */
+  text-align: left; /* Center-align text */
 }
