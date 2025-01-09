@@ -23,7 +23,7 @@ const DoctorsTable = () => {
     <div>
       {showReports && (
         <div
-          className="reports-area"
+          className="reports-area shadow"
           // Uncomment and customize if needed
           // style={{
           //   margin: "200px auto",
