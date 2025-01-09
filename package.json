@@ -14,9 +14,6 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    // original build script
-    // "build": "react-scripts build",
-    // build for production
     "build": "react-scripts build && rm -rdf server/build && mv build server/",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
