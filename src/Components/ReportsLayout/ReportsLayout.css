@@ -3,23 +3,35 @@
   text-align: left;
 } */
 
-.reviewArea {
+.reports-area {
   width: 1200px;
-  margin: auto;
-  margin-top: 20px;
-  /* padding-top: 30px;
-  padding-left:50px; */
+  /* margin: auto; */
+  margin: 220px auto;
+  padding: 20px;
   border-radius: 10px;
-  border: solid 1px #f5e0db;
-  /* border: solid 1px #ccc; */
+  /* border: solid 1px #f5e0db; */
   background-color: #fff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+ /* Header with the title and Close Icon */
+ #header {
+  display: "flex"; 
+  justify-content: "space-between"; 
+  align-items: "center"; 
+  width:"800px";
+ }
+
+ .nowrap {
+  white-space: nowrap;
 }
 
 /* Style for table */
 table {
   /* border-collapse: "collapse"; */
   /* width: "1000px"; */
-  border: solid 1px #ccc;
+  /* border: solid 1px #ccc; */
   /* padding: -1px; */
 }
 th {
@@ -38,30 +50,10 @@ tr {
   border: solid 1px gray;
 }
 
-/* Styles for the container element */
-.form-container {
-  max-width: 900px; /* Set maximum width for the container */
-  margin: 0 auto; /* Center the container horizontally */
-  padding: 40px; /* Add padding inside the container */
-  margin-top: 10%; /* Set top margin as a percentage of the viewport height */
-  overflow: hidden; /* Hide any overflowing content */
-  background-color: white;
-
-  /* fix container to middle of teh screen */
-  width: 50%;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 .shadow {
   box-shadow: 5px 5px 10px 2px rgb(0 0 0 / 0.8);
 }
 
-.input-field-rule {
-  font-size: 12px;
-}
 
 /* Styles for the grid layout of the signup form */
 .feedback-grid {

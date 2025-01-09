@@ -156,12 +156,13 @@ const Navbar = () => {
               textDecoration: "none",
               color: "#ff851b",
               fontWeight: "bold",
-              cursor: "pointer",
+              cursor: "pointer"
             }}
           >
             Your Profile
           </a>
-            <br /><br />
+          <br />
+          <br />
           <a
             href="#"
             onClick={openReportsComponent}
@@ -199,20 +200,7 @@ const Navbar = () => {
 
       {/* Reports Component */}
       {showReportsComponent && (
-        <div
-          style={{
-            position: "absolute",
-            backgroundColor: "white",
-            // border: "1px solid gray",
-            borderRadius: "5px",
-            padding: "20px 60px",
-            top: "190px",
-            right: "100px",
-            zIndex: "1000",
-            boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.2)",
-            color: "#3d3c3c"
-          }}
-        >
+        <div>
           <ReportsLayout />
         </div>
       )}
