@@ -1,199 +1,86 @@
-import React, { useState, useEffect } from "react"
-import doctorData from "./doctorData.json"
+import React, { useEffect, useState } from "react";
+import doctorsData from "./doctorsData.json"; // Import JSON file
 
-import "../../App.css"
-import "./ReportsLayout.css"
-// import doctorData from "/data/doctorsCatalog.json"
+const DoctorsTable = () => {
+  const [doctors, setDoctors] = useState([]);
+  const [viewingReport, setViewingReport] = useState(null); // Manage report viewing state
 
-const ReportsLayout = () => {
-  const [data, setData] = useState([]) // Doctors data
-  const [selectedDoctor, setSelectedDoctor] = useState(null) // Selected doctor for the form
-  const [formValues, setFormValues] = useState({
-    username: "",
-    reviewContent: "",
-    doctorRating: ""
-  }) // Form input values
-
-  const getDoctorsDetails = () => {
-    // define a function that fetches doctors' data either from the local storage or from the file
-    fetch("/data/doctorsCatalog.json")
-      .then(res => res.json())
-      .then(data => {
-        if (localStorage.getItem("reviews")) {
-          const reviews = JSON.parse(localStorage.getItem("reviews"))
-          setData(reviews)
-        } else {
-          setData(data)
-        }
-        setData(data)
-      })
-      .catch(err => console.log(err))
-  }
-  // load the data
   useEffect(() => {
-    // setData(doctorData) // Load data from JSON file
-    // if (localStorage.getItem("reviews")) {
-    //   const reviews = JSON.parse(localStorage.getItem("reviews"))
-    //   setData(reviews)
-    // } else {
-    //   setData(doctorData)
-    // }
-    getDoctorsDetails()
-  }, [])
+    setDoctors(doctorsData); // Load doctors' data from JSON
+  }, []);
 
-  const handleInputChange = e => {
-    const { name, value } = e.target
-    setFormValues({ ...formValues, [name]: value })
-  }
+  const handleViewReport = (reportName) => {
+    // the URL of the report file
+    const reportUrl = `${process.env.PUBLIC_URL}/reports/${reportName}`;
+    window.open(reportUrl, "_blank"); // Open report in a new browser tab
+  };
 
-  const handleFormSubmit = e => {
-    e.preventDefault()
-    const updatedData = data.map(doctor =>
-      doctor.serialNumber === selectedDoctor
-        ? {
-            ...doctor,
-            review: formValues.reviewContent,
-            buttonDisabled: true // Add a flag to disable the button
-          }
-        : doctor
-    )
-    setData(updatedData)
-    //  persist state into local storage
-    localStorage.setItem("reviews", JSON.stringify(data))
-    setSelectedDoctor(null) // Close the form
-    setFormValues({ username: "", reviewContent: "", doctorRating: "" }) // Reset form
-  }
-
-  const handleCancel = () => {
-    setSelectedDoctor(null) // Close the form
-  }
+  const handleDownloadReport = (reportName) => {
+    const reportUrl = `${process.env.PUBLIC_URL}/reports/${reportName}`;
+    const anchor = document.createElement("a");
+    anchor.href = reportUrl;
+    anchor.download = reportName; // Set the file name for download
+    anchor.click();
+  };
 
   return (
-    <div>
-      <h1 style={{ textAlign: "left" }}>Reports</h1>
-      <div className="reviewArea">
-        <table>
-          <thead>
-            <tr>
-              <th style={{ width: "140px" }}>Serial Number</th>
-              <th style={{ width: "200px" }}>Doctor Name</th>
-              <th style={{ width: "250px" }}>Doctor Speciality</th>
-              <th>View Report</th>
-              <th style={{ width: "200px" }}>Download Report</th>
+    <div style={{ padding: "20px" }}>
+      <h1 style={{ fontWeight: "bold", textAlign: "left" }}>Doctors Reports</h1>
+      <table
+        border="1"
+        style={{ borderCollapse: "collapse", width: "100%", marginTop: "20px" }}
+      >
+        <thead>
+          <tr>
+            <th>Serial Number</th>
+            <th>Doctor Name</th>
+            <th>Doctor Speciality</th>
+            <th>View Report</th>
+            <th>Download Report</th>
+          </tr>
+        </thead>
+        <tbody>
+          {doctors.map((doctor) => (
+            <tr key={doctor.serialNumber}>
+              <td>{doctor.serialNumber}</td>
+              <td>{doctor.doctorName}</td>
+              <td>{doctor.doctorSpeciality}</td>
+              <td>
+                <button
+                  onClick={() => handleViewReport(doctor.doctorReport)}
+                  style={{
+                    backgroundColor: "blue",
+                    color: "white",
+                    border: "none",
+                    padding: "5px 10px",
+                    borderRadius: "5px",
+                    cursor: "pointer",
+                  }}
+                >
+                  View Report
+                </button>
+              </td>
+              <td>
+                <button
+                  onClick={() => handleDownloadReport(doctor.doctorReport)}
+                  style={{
+                    backgroundColor: "green",
+                    color: "white",
+                    border: "none",
+                    padding: "5px 10px",
+                    borderRadius: "5px",
+                    cursor: "pointer",
+                  }}
+                >
+                  Download Report
+                </button>
+              </td>
             </tr>
-          </thead>
-          <tbody>
-            {data.map(doctor => (
-              <tr key={doctor.serialNumber}>
-                <td>{doctor.serialNumber}</td>
-                <td>{doctor.name}</td>
-                <td>{doctor.speciality}</td>
-                <td>
-                  <button
-                    className="btn btn-primary"
-                    style={{
-                      backgroundColor: doctor.buttonDisabled ? "gray" : "#ff851b",
-                      cursor: doctor.buttonDisabled ? "not-allowed" : "pointer",
-                      width: "200px"
-                    }}
-                    disabled={doctor.buttonDisabled}
-                    onClick={() => setSelectedDoctor(doctor.serialNumber)}
-                  >
-                    {doctor.buttonDisabled ? "Feedback Submitted" : "View Report"}
-                  </button>
-                </td>
-                <td>
-                  <button
-                    className="btn btn-primary"
-                    style={{
-                      backgroundColor: doctor.buttonDisabled ? "gray" : "#ff851b",
-                      cursor: doctor.buttonDisabled ? "not-allowed" : "pointer",
-                      width: "200px"
-                    }}
-                    disabled={doctor.buttonDisabled}
-                    onClick={() => setSelectedDoctor(doctor.serialNumber)}
-                  >
-                    {doctor.buttonDisabled ? "Feedback Submitted" : "Download Report"}
-                  </button>
-                </td>
-              </tr>
-            ))}
-          </tbody>
-        </table>
-
-        {/* Feedback Form */}
-        {selectedDoctor && (
-          <div
-            className="form-container shadow"
-            style={{
-              marginTop: "20px",
-              padding: "20px",
-              border: "1px solid #ccc",
-              borderRadius: "5px",
-              width: "300px"
-            }}
-          >
-            {/* <div className="feedback-grid feedback-card"> */}
-            <div>
-              <h3 style={{ marginBottom: "20px" }}>Give Your Review</h3>
-              <form onSubmit={handleFormSubmit}>
-                {/* Input: Username */}
-                <div style={{ marginBottom: "10px", textAlign: "left" }}>
-                  <label style={{ display: "block", marginBottom: "5px" }}>Username:</label>
-                  <input type="text" name="username" value={formValues.username} onChange={handleInputChange} style={{ width: "100%", padding: "8px", boxSizing: "border-box" }} required />
-                </div>
-
-                {/* Input: Review Content */}
-                <div style={{ marginBottom: "10px", textAlign: "left" }}>
-                  <label style={{ display: "block", marginBottom: "5px" }}>Review:</label>
-                  <input type="text" name="reviewContent" value={formValues.reviewContent} onChange={handleInputChange} style={{ width: "100%", padding: "8px", boxSizing: "border-box" }} required />
-                </div>
-
-                {/* Input: Doctor Rating */}
-                <div style={{ marginBottom: "10px", textAlign: "left" }}>
-                  <label style={{ display: "block", marginBottom: "5px" }}>Doctor Rating:</label>
-                  <input type="number" name="doctorRating" value={formValues.doctorRating} onChange={handleInputChange} style={{ width: "100%", padding: "8px", boxSizing: "border-box" }} required min="1" max="5" />
-                </div>
-
-                {/* Buttons */}
-                <div style={{ display: "flex", justifyContent: "space-between" }}>
-                  <button
-                    type="submit"
-                    className="btn btn-primary"
-                    // style={{
-                    //   backgroundColor: "green",
-                    //   color: "white",
-                    //   border: "none",
-                    //   padding: "10px 20px",
-                    //   borderRadius: "5px",
-                    //   cursor: "pointer"
-                    // }}
-                  >
-                    Submit
-                  </button>
-                  <button
-                    type="button"
-                    className="btn btn-danger"
-                    onClick={handleCancel}
-                    // style={{
-                    //   backgroundColor: "red",
-                    //   color: "white",
-                    //   border: "none",
-                    //   padding: "10px 20px",
-                    //   borderRadius: "5px",
-                    //   cursor: "pointer"
-                    // }}
-                  >
-                    Cancel
-                  </button>
-                </div>
-              </form>
-            </div>
-          </div>
-        )}
-      </div>
+          ))}
+        </tbody>
+      </table>
     </div>
-  )
-}
+  );
+};
 
-export default ReportsLayout
+export default DoctorsTable;

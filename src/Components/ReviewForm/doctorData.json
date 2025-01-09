@@ -1,16 +1,14 @@
 [
   {
-    "serialNumber": 1,
-    "name": "Dr. John Doe",
-    "speciality": "Cardiology",
-    "review": null,
-    "buttonDisabled": false
+    "serialNumber": "1",
+      "name": "Dr. Jessica White",
+      "speciality": "Cardiology",
+      "reportFile": "dr_white_patient_report.pdf"
   },
   {
-    "serialNumber": 2,
-    "name": "Dr. Jane Smith",
-    "speciality": "Neurology",
-    "review": null,
-    "buttonDisabled": false
+    "serialNumber": "2",
+      "name": "Dr. Jane Smith",
+      "speciality": "Neurology",
+      "reportFile": "dr_smith_patient_report.pdf"
   }
 ]
