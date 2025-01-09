@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react"
-import doctorData from "./doctorData.json"
+// import doctorData from "./doctorData.json"
 
 import "../../App.css"
 import "./ReviewForm.css"
@@ -31,13 +31,6 @@ const ReviewForm = () => {
   }
   // load the data
   useEffect(() => {
-    // setData(doctorData) // Load data from JSON file
-    // if (localStorage.getItem("reviews")) {
-    //   const reviews = JSON.parse(localStorage.getItem("reviews"))
-    //   setData(reviews)
-    // } else {
-    //   setData(doctorData)
-    // }
     getDoctorsDetails()
   }, [])
 

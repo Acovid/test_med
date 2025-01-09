@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react"
+import React, { useState } from "react"
 // import { useNavigate } from "react-router-dom"
 import Popup from "reactjs-popup"
 import "reactjs-popup/dist/index.css"
@@ -6,29 +6,29 @@ import "./DoctorCardIC.css"
 import "../../../App.css"
 import AppointmentFormIC from "../AppointmentFormIC/AppointmentFormIC"
 import { v4 as uuidv4 } from "uuid"
-import Notification from "../../Notification/Notification"
+// import Notification from "../../Notification/Notification"
 
 // const DoctorCardIC = ({ name, speciality, experience, ratings, profilePic }) => {
 const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
   const [showModal, setShowModal] = useState(false)
   const [appointments, setAppointments] = useState([])
-  const [doctorData, setDoctorData] = useState(null)
+  // const [doctorData, setDoctorData] = useState(null)
 
-  const doctor = {
-    name: name,
-    speciality: speciality
-  }
+  // const doctor = {
+  //   name: name,
+  //   speciality: speciality
+  // }
 
-  const handleBooking = () => {
-    setShowModal(true)
-  }
+  // const handleBooking = () => {
+  //   setShowModal(true)
+  // }
 
   const handleCancel = appointmentId => {
     const updatedAppointments = appointments.filter(appointment => appointment.id !== appointmentId)
     setAppointments(updatedAppointments)
     // remove appointment from the local storage
     localStorage.removeItem("appointmentData")
-    localStorage.removeItem("doctorData")
+    // localStorage.removeItem("doctorData")
     console.log("From DoctorCardIC.js:\nI removed the appointment data from local storage")
     window.location.reload()
     // setShowModal(false)
@@ -105,7 +105,7 @@ const DoctorCardIC = ({ name, speciality, experience, ratings, picture }) => {
           onClose={() => setShowModal(false)}
         >
           {close => (
-            <div className="doctorbg" >
+            <div className="doctorbg">
               <div>
                 <div className="doctor-card-profile-image-container-small">
                   {/* <svg xmlns="http://www.w3.org/2000/svg" width="46" height="46" fill="currentColor" className="bi bi-person-fill" viewBox="0 0 16 16">
